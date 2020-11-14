@@ -1,0 +1,453 @@
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: strings.xml conversion
+ * Release: Working copy
+ * Locale: en, English
+ * Exported by: Unregistered user
+ * Exported at: Wed, 07 Oct 2020 22:00:30 +0530
+ */
+
+/* string name="MAP_API_KEY">AIzaSyBVrQC5_2xCY6tX8ibJmVZqKsNtjETyeZE</string
+Button */
+
+"ITEM_HISTORY" = "History";
+"ITEM_ENGINE" = "Engine";
+
+"BTN_LOGIN" = "LOGIN";
+
+/*  */
+"BTN_SEND_MESSAGE" = "SEND MESSAGE";
+
+/*  */
+"BTN_UPDATE_PASSWORD" = "UPDATE PASSWORD";
+
+/*  */
+"BTN_SAVE_SETTINGS" = "SAVE SETTINGS";
+
+/*  */
+"BTN_TRACK_VEHICLE" = "Track Vehicle";
+
+/*  */
+"BTN_HIDE" = "HIDE ";
+
+/*  */
+"BTN_DONT_SHOW_AGAIN" = "Don't show again";
+
+/*  */
+"BTN_RENEW" = "RENEW";
+
+/*  */
+"BTN_CREATE_TRIP" = "CREATE TRIP";
+
+/*  */
+"BTN_UPDATE_TRIP" = "UPDATE TRIP";
+
+/* Menu Item */
+"ITEM_TRIPS" = "Trips";
+
+/*  */
+"ITEM_REPORTS" = "Reports";
+
+/*  */
+"ITEM_CONTACT_US" = "Contact Us";
+
+/*  */
+"ITEM_MY_ACCOUNT" = "My Account";
+
+/*  */
+"ITEM_PAY" = "Pay Now";
+
+/*  */
+"ITEM_SETTINGS" = "Settings";
+
+/*  */
+"ITEM_LOGOUT" = "Logout";
+
+/*  */
+"ITEM_BIRDVIEW" = "Bird View";
+
+/*  */
+"ITEM_NOTIFICATION" = "Notification";
+
+/*  */
+"ITEM_HOME" = "Dashboard";
+
+/*  */
+"ITEM_SHARE_LINK" = "Share Link";
+
+/*  */
+"ITEM_TRACK" = "Track";
+
+/*  */
+"ITEM_PLAYBACK" = "Playback";
+
+/*  */
+"ITEM_COMMAND" = "Command";
+
+/*  */
+"ITEM_SUMMARY" = "Summary";
+
+/*  */
+"ITEM_VEHICLE" = "Vehicle";
+
+/*  */
+"ITEM_SPEED" = "Speed";
+
+/*  */
+"ITEM_DATE" = "Date";
+
+/*  */
+"ITEM_NORMAL" = "Normal";
+
+/*  */
+"ITEM_SATELLITE" = "Satellite";
+
+/*  */
+"ITEM_TERRAIN" = "Terrain";
+
+/*  */
+"ITEM_VERY_SLOW" = "Very slow";
+
+/*  */
+"ITEM_SLOW" = "Slow";
+
+/*  */
+"ITEM_FAST" = "Fast";
+
+/*  */
+"ITEM_VERY_FAST" = "Very fast";
+
+/*  */
+"ITEM_TODAY" = "Today";
+
+/*  */
+"ITEM_YESTERDAY" = "Yesterday";
+
+/*  */
+"ITEM_BEFORE_YESTERDAY" = "Before yesterday";
+
+/*  */
+"ITEM_HOUR_AGO" = "Hour ago";
+
+/*  */
+"ITEM_USER_DEFINED" = "User-defined";
+
+/*  */
+"ITEM_ONE_DAY" = "1 Day";
+
+/*  */
+"ITEM_TWO_DAY" = "2 Day";
+
+/*  */
+"ITEM_WEEK" = "Week";
+
+/*  */
+"ITEM_SEARCH" = "Search Location";
+
+/*  */
+"ITEM_EDIT_TRIP" = "Edit Trip";
+
+/*  */
+"ITEM_STOP_TRIP" = "Stop Trip";
+
+/*  */
+"ITEM_DELETE_TRIP" = "Delete Trip";
+
+/*  */
+"ITEM_GENERATE_TRIP_REPORT" = "Generate Trip Report";
+
+/* Share Link Menu Item */
+"TODAY" = "Today";
+
+/* Radio Button Item */
+"RB_10" = "10 seconds";
+
+/*  */
+"RB_20" = "20 seconds";
+
+/*  */
+"RB_30" = "30 seconds";
+
+/*  */
+"RB_60" = "60 seconds";
+
+/*  */
+"SECONDS" = "seconds";
+
+/*  */
+"RB_DASHBOARD" = "Dashboard";
+
+/*  */
+"RB_BIRDVIEW" = "Bird View";
+
+/* Checkbox Item */
+"CB_NOTIFICATION" = "Toggle Push Notifications";
+
+/* Navigation Drawer */
+"NAVIGATION_OPEN" = "open drawer";
+
+/*  */
+"NAVIGATION_CLOSE" = "close drawer";
+
+/* Title */
+"TITLE_DASHBOARD" = "Dashboard";
+
+/*  */
+"TITLE_REPORTS" = "Reports";
+
+/*  */
+"TITLE_CONTACT_US" = "Contact Us";
+
+/*  */
+"TITLE_MY_ACCOUNT" = "My Account";
+
+/*  */
+"TITLE_SETTINGS" = "Settings";
+
+/*  */
+"TITLE_NOTIFICATIONS" = "Notifications";
+
+/*  */
+"TITLE_BIRDVIEW" = "Bird View";
+
+/*  */
+"TITLE_TRIPS" = "Trips";
+
+/* Hint */
+"HINT_USERNAME" = "Username";
+
+/*  */
+"HINT_PASSWORD" = "Password";
+
+/*  */
+"HINT_MESSAGE" = "Type your message here";
+
+/*  */
+"HINT_OLD_PASSWORD" = "Old Password";
+
+/*  */
+"HINT_NEW_PASSWORD" = "New Password";
+
+/*  */
+"HINT_CONFIRM_PASSWORD" = "Confirm Password";
+
+/*  */
+"HINT_SEARCH" = " \tSearch Vehicle";
+
+/*  */
+"HINT_TRIP_NAME" = "Trip Name";
+
+/*  */
+"HINT_DRIVER_NAME" = "Driver Name";
+
+/*  */
+"HINT_DRIVER_NUMBER" = "Driver Mobile Number";
+
+/*  */
+"HINT_TRIP_DESCRIPTION" = "Trip Description";
+
+/*  */
+"HINT_TRIP_START_DATE_TIME" = "Trip Start";
+
+/* Error Messages */
+"CONNECTION_ERROR" = "The internet connection appears to be offline.";
+
+/*  */
+"SERVER_ERROR" = "We are having trouble connecting to server. Please try again later.";
+
+/*  */
+"ERROR_USERNAME" = "Please enter username";
+
+/*  */
+"ERROR_PASSWORD" = "Please enter password";
+
+/*  */
+"ERROR_INVALID_CREDENTIALS" = "Invalid Username or Password";
+
+/*  */
+"ERROR_MESSAGE" = "Please enter message";
+
+/*  */
+"ERROR_OLD_PASSWORD" = "Please enter old password";
+
+/*  */
+"ERROR_NEW_PASSWORD" = "Please enter new password";
+
+/*  */
+"ERROR_CONFIRM_PASSWORD" = "Please confirm password";
+
+/*  */
+"ERROR_NO_PASSWORD_MATCH" = "Passwords do not match";
+
+/*  */
+"ERROR_NO_NOTIFICATIONS" = "No Notifications";
+
+/*  */
+"ERROR_FAIl_TO_MARK_AS_READ" = "Mark As Read Fail. Try Again.";
+
+/*  */
+"ERROR_VEHICLE_ID" = "Please select Vehicle";
+
+/*  */
+"ERROR_INPUT_FIELD" = "Please enter %@";
+
+/*  */
+"ERROR_END_START_DATE" = "Start date can't be greater than end date";
+
+/*  */
+"ERROR_NO_REPORTS" = "No Reports";
+
+/*  */
+"ERROR_NO_PLAYBACK" = "No moving data available for the selected period.";
+
+/*  */
+"ERROR_FAIL_ACTIVE_PARKINGMODE" = "Fail to activate parking mode";
+
+/*  */
+"ERROR_FAIL_DEACTIVE_PARKINGMODE" = "Fail to deactivate parking mode";
+
+/*  */
+"ERROR_END_START_DATETIME" = "Start datetime can't be greater than end datetime";
+
+/*  */
+"ERROR_TRIP_NAME" = "Please enter trip name";
+
+/* Textview */
+"TV_APP_VERSION" = "Version %@";
+
+/*  */
+"TV_AUTO_REFRESH" = "Auto Refresh";
+
+/*  */
+"TV_NOTIFICATIONS" = "Notifications";
+
+/*  */
+"TV_NAME" = "Name:";
+
+/*  */
+"TV_ADDRESS" = "Address:";
+
+/*  */
+"TV_SUPPORT" = "Support:";
+
+/*  */
+"TV_EMAIL" = "Email:";
+
+/*  */
+"TV_VIEW_DETAILS" = "<u>View Details</u>";
+
+/*  */
+"TV_START_DATE_TIME" = "Start Date Time";
+
+/*  */
+"TV_END_DATE_TIME" = "End Date Time";
+
+/*  */
+"TV_CUT_OFF_ENGINE" = "Cut-off Engine";
+
+/*  */
+"TV_RESTORE_ENGINE" = "Restore Engine";
+
+/*  */
+"TV_CUT_OFF_AC" = "Cut-off AC";
+
+/*  */
+"TV_RESTORE_AC" = "Restore AC";
+
+/*  */
+"TV_COMMAND_COUNTDOWN" = "Please wait for %d seconds to access command";
+
+/*  */
+"TV_DATE_INFO" = "- select date from here";
+
+/*  */
+"TV_SPEED_INFO" = "- select speed from here";
+
+/*  */
+"TV_LANGUAGE" = "Language";
+
+/*  */
+"TV_COMMAND" = "Command";
+
+/*  */
+"TV_COMMAND_STATUS" = "Command Status";
+
+/*  */
+"TV_INITIATED_ON" = "Initiated On";
+
+/*  */
+"TV_PROCESSED_ON" = "Processed On";
+
+/*  */
+"TV_STARTUP_SCREEN" = "Startup Screen";
+
+/*  */
+"TV_TRIP_NAME" = "Trip Name";
+
+/*  */
+"TV_TRIP_DRIVER_NAME" = "Driver Name";
+
+/*  */
+"TV_TRIP_START_DATETIME" = "Trip Start";
+
+/*  */
+"TV_TRIP_END_DATETIME" = "Trip End";
+
+/*  */
+"TV_TRIP_DURATION" = "Trip Duration";
+
+/*  */
+"TV_VEHICLE_NAME" = "Vehicle Name";
+
+/*  */
+"TV_NO_TRIPS_AVAILABLE" = "No Trips Available";
+
+/* Tabs */
+"TAB_ALL" = "All (%d)";
+
+/*  */
+"TAB_ACTIVE" = "Active (%d)";
+
+/*  */
+"TAB_IDLE" = "Idle (%d)";
+
+/*  */
+"TAB_STOP" = "Stop (%d)";
+
+/*  */
+"TAB_UNREACHABLE" = "Unreachable (%d)";
+
+/*  */
+"TAB_INACTIVE" = "Inactive (%d)";
+
+/* Alert */
+"ALERT_LOGOUT" = "Are you sure you want to log out?";
+
+/*  */
+"ALERT_BUTTON_YES" = "Yes";
+
+/*  */
+"ALERT_BUTTON_NO" = "No";
+
+/*  */
+"ALERT_BUTTON_OK" = "OK";
+
+/*  */
+"ALERT_BUTTON_CANCEL" = "Cancel";
+
+/*  */
+"ALERT_RETRY" = "Retry";
+
+/*  */
+"ALERT_SAVE_SETTINGS" = "Settings Saved Successfully";
+
+/*  */
+"ALERT_TRIP" = "Are you sure you want to %@ this trip?";
+
+/*  */
+"ALERT_DELETE" = "delete";
+
+/*  */
+"ALERT_STOP" = "stop";
+
+"ERROR_VALID_MOBILE_NUMBER" = "Please enter valid mobile number";

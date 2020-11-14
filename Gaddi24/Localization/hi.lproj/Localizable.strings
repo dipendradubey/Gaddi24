@@ -1,0 +1,448 @@
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: strings (2).xml conversion
+ * Release: Working copy
+ * Locale: en, English
+ * Exported by: Unregistered user
+ * Exported at: Wed, 07 Oct 2020 22:08:17 +0530
+ */
+"ITEM_HISTORY" = "प्लेबैक";
+"ITEM_ENGINE" = "इंजन";
+"BTN_LOGIN" = "लॉग इन करें";
+
+/*  */
+"BTN_SEND_MESSAGE" = "मेसेज भेजें";
+
+/*  */
+"BTN_UPDATE_PASSWORD" = "पासवर्ड अपडेट करें";
+
+/*  */
+"BTN_SAVE_SETTINGS" = "समायोजन बचाओ";
+
+/*  */
+"BTN_TRACK_VEHICLE" = "वाहन पर नज़र रखना";
+
+/*  */
+"BTN_HIDE" = "छिपाना ";
+
+/*  */
+"BTN_DONT_SHOW_AGAIN" = "फिर मत दिखाना";
+
+/*  */
+"BTN_RENEW" = "नवीकरण";
+
+/*  */
+"BTN_CREATE_TRIP" = "यात्रा बनाएँ";
+
+/*  */
+"BTN_UPDATE_TRIP" = "यात्रा अपडेट करें";
+
+/* Menu Item */
+"ITEM_TRIPS" = "यात्राएं";
+
+/*  */
+"ITEM_REPORTS" = "रिपोर्ट";
+
+/*  */
+"ITEM_CONTACT_US" = "हमसे संपर्क करें";
+
+/*  */
+"ITEM_MY_ACCOUNT" = "मेरा खाता";
+
+/*  */
+"ITEM_PAY" = "भुगतान करें";
+
+/*  */
+"ITEM_SETTINGS" = "सेटिंग्स";
+
+/*  */
+"ITEM_LOGOUT" = "बहार निकले";
+
+/*  */
+"ITEM_BIRDVIEW" = "ऊपर से देखे";
+
+/*  */
+"ITEM_NOTIFICATION" = "अधिसूचना";
+
+/*  */
+"ITEM_HOME" = "डैशबोर्ड";
+
+/*  */
+"ITEM_SHARE_LINK" = "लिंक शेयर करें";
+
+/*  */
+"ITEM_TRACK" = "नज़र रखना";
+
+/*  */
+"ITEM_PLAYBACK" = "प्लेबैक";
+
+/*  */
+"ITEM_COMMAND" = "आदेश";
+
+/*  */
+"ITEM_SUMMARY" = "सारांश";
+
+/*  */
+"ITEM_VEHICLE" = "वाहन";
+
+/*  */
+"ITEM_SPEED" = "गति";
+
+/*  */
+"ITEM_DATE" = "तारीख";
+
+/*  */
+"ITEM_NORMAL" = "साधारण";
+
+/*  */
+"ITEM_SATELLITE" = "उपग्रह";
+
+/*  */
+"ITEM_TERRAIN" = "इलाक़ा";
+
+/*  */
+"ITEM_VERY_SLOW" = "बहुत धीरे";
+
+/*  */
+"ITEM_SLOW" = "धीरे";
+
+/*  */
+"ITEM_FAST" = "तेज";
+
+/*  */
+"ITEM_VERY_FAST" = "बहुत तेज";
+
+/*  */
+"ITEM_TODAY" = "आज";
+
+/*  */
+"ITEM_YESTERDAY" = "कल";
+
+/*  */
+"ITEM_BEFORE_YESTERDAY" = "कल से पहले";
+
+/*  */
+"ITEM_HOUR_AGO" = "एक घंटे पहले";
+
+/*  */
+"ITEM_USER_DEFINED" = "उपयोगकर्ता परिभाषित";
+
+/*  */
+"ITEM_ONE_DAY" = "1 दिन";
+
+/*  */
+"ITEM_TWO_DAY" = "2 दिन";
+
+/*  */
+"ITEM_WEEK" = "सप्ताह";
+
+/*  */
+"ITEM_SEARCH" = "स्थान खोजें";
+
+/*  */
+"ITEM_EDIT_TRIP" = "यात्रा संपादित करें";
+
+/*  */
+"ITEM_STOP_TRIP" = "यात्रा को रोके";
+
+/*  */
+"ITEM_DELETE_TRIP" = "यात्रा को हटाएं";
+
+/*  */
+"ITEM_GENERATE_TRIP_REPORT" = "रिपोर्ट बनाएं";
+
+/* Share Link Menu Item */
+"TODAY" = "आज";
+
+/* Radio Button Item */
+"RB_10" = "10 सेकंड";
+
+/*  */
+"RB_20" = "20 सेकंड";
+
+/*  */
+"RB_30" = "30 सेकंड";
+
+/*  */
+"RB_60" = "60 सेकंड";
+
+/*  */
+"SECONDS" = "सेकंड";
+
+/*  */
+"RB_DASHBOARD" = "डैशबोर्ड";
+
+/*  */
+"RB_BIRDVIEW" = "ऊंचाई वाली जगह से देखना";
+
+/* Checkbox Item */
+"CB_NOTIFICATION" = "सूचना बताये";
+
+/* Navigation Drawer */
+"NAVIGATION_OPEN" = "खुला दराज";
+
+/*  */
+"NAVIGATION_CLOSE" = "बंद दराज";
+
+/* Title */
+"TITLE_DASHBOARD" = "डैशबोर्ड";
+
+/*  */
+"TITLE_REPORTS" = "रिपोर्ट";
+
+/*  */
+"TITLE_CONTACT_US" = "हमें संपर्क करें";
+
+/*  */
+"TITLE_MY_ACCOUNT" = "मेरा खाता";
+
+/*  */
+"TITLE_SETTINGS" = "सेटिंग्स";
+
+/*  */
+"TITLE_NOTIFICATIONS" = "सूचनाएं";
+
+/*  */
+"TITLE_BIRDVIEW" = "ऊंचाई वाली जगह से देखना";
+
+/*  */
+"TITLE_TRIPS" = "यात्रा";
+
+/* Hint */
+"HINT_USERNAME" = "उपयोगकर्ता नाम";
+
+/*  */
+"HINT_PASSWORD" = "पासवर्ड";
+
+/*  */
+"HINT_MESSAGE" = "अपना संदेश यहां अंकित करें";
+
+/*  */
+"HINT_OLD_PASSWORD" = "पुराना पासवर्ड";
+
+/*  */
+"HINT_NEW_PASSWORD" = "नया पासवर्ड";
+
+/*  */
+"HINT_CONFIRM_PASSWORD" = "पासवर्ड की पुष्टि कीजिये";
+
+/*  */
+"HINT_SEARCH" = " \tवाहन खोजें";
+
+/*  */
+"HINT_TRIP_NAME" = "यात्रा का नाम";
+
+/*  */
+"HINT_DRIVER_NAME" = "ड्राइवर का नाम";
+
+/*  */
+"HINT_DRIVER_NUMBER" = "ड्राइवर का मोबाइल नंबर";
+
+/*  */
+"HINT_TRIP_DESCRIPTION" = "यात्रा विवरण";
+
+/*  */
+"HINT_TRIP_START_DATE_TIME" = "यात्रा की शुरुआत";
+
+/* Error Messages */
+"CONNECTION_ERROR" = "इंटरनेट कनेक्शन के कारण आप ऑफ़लाइन हैं.";
+
+/*  */
+"SERVER_ERROR" = "हमें सर्वर से कनेक्ट करने में समस्या हो रही है।. बाद में पुन: प्रयास करें।";
+
+/*  */
+"ERROR_USERNAME" = "कृपया उपयोगकर्ता नाम दर्ज करें";
+
+/*  */
+"ERROR_PASSWORD" = "कृप्या पास्वर्ड भरो";
+
+/*  */
+"ERROR_INVALID_CREDENTIALS" = "अमान्य उपयोगकर्ता नाम या पासवर्ड";
+
+/*  */
+"ERROR_MESSAGE" = "कृपया संदेश दर्ज करें";
+
+/*  */
+"ERROR_OLD_PASSWORD" = "कृपया पुराना पासवर्ड डालें";
+
+/*  */
+"ERROR_NEW_PASSWORD" = "कृपया नया पासवर्ड दर्ज करें";
+
+/*  */
+"ERROR_CONFIRM_PASSWORD" = "कृपया पासवर्ड की पुष्टि करें";
+
+/*  */
+"ERROR_NO_PASSWORD_MATCH" = "पासवर्ड मेल नहीं खाते";
+
+/*  */
+"ERROR_NO_NOTIFICATIONS" = "कोई सूचनाएं नहीं";
+
+/*  */
+"ERROR_FAIl_TO_MARK_AS_READ" = "पढ़े हुए चिन्हित कीजिये विफल. पुनः प्रयास करें।";
+
+/*  */
+"ERROR_VEHICLE_ID" = "कृपया वाहन का चयन करें";
+
+/*  */
+"ERROR_INPUT_FIELD" = "कृपया %@ दर्ज करें";
+
+/*  */
+"ERROR_END_START_DATE" = "प्रारंभ तिथि अंतिम तिथि से अधिक नहीं हो सकती";
+
+/*  */
+"ERROR_NO_REPORTS" = "कोई रिपोर्ट नहीं";
+
+/*  */
+"ERROR_NO_PLAYBACK" = "चयनित अवधि के लिए कोई मूविंग डेटा उपलब्ध नहीं है।";
+
+/*  */
+"ERROR_FAIL_ACTIVE_PARKINGMODE" = "पार्किंग मोड को सक्रिय करने में विफल";
+
+/*  */
+"ERROR_FAIL_DEACTIVE_PARKINGMODE" = "पार्किंग मोड को निष्क्रिय करने में विफल";
+
+/*  */
+"ERROR_END_START_DATETIME" = "प्रारंभ डेटाइम अंत डेटाइम से अधिक नहीं हो सकता है";
+
+/*  */
+"ERROR_TRIP_NAME" = "कृपया यात्रा का नाम दर्ज करें";
+
+/* Textview */
+"TV_APP_VERSION" = "संस्करण %@";
+
+/*  */
+"TV_AUTO_REFRESH" = "स्वयं नवीनीकरण";
+
+/*  */
+"TV_NOTIFICATIONS" = "सूचनाएं";
+
+/*  */
+"TV_NAME" = "नाम:";
+
+/*  */
+"TV_ADDRESS" = "पता:";
+
+/*  */
+"TV_SUPPORT" = "समर्थन:";
+
+/*  */
+"TV_EMAIL" = "ईमेल:";
+
+/*  */
+"TV_VIEW_DETAILS" = "<u>विवरण देखें</u>";
+
+/*  */
+"TV_START_DATE_TIME" = "प्रारंभ समय";
+
+/*  */
+"TV_END_DATE_TIME" = "अंतिम समय";
+
+/*  */
+"TV_CUT_OFF_ENGINE" = "इंजन बंद करें";
+
+/*  */
+"TV_RESTORE_ENGINE" = "इंजन चालू करें";
+
+/*  */
+"TV_CUT_OFF_AC" = "एसी बंद करें";
+
+/*  */
+"TV_RESTORE_AC" = "एसी चालू करें";
+
+/*  */
+"TV_COMMAND_COUNTDOWN" = "आदेश एक्सेस करने के लिए कृपया %d सेकंड प्रतीक्षा करें";
+
+/*  */
+"TV_DATE_INFO" = "- यहां से तारीख का चयन करें";
+
+/*  */
+"TV_SPEED_INFO" = "- यहाँ से गति का चयन करें";
+
+/*  */
+"TV_LANGUAGE" = "भाषा:";
+
+/*  */
+"TV_COMMAND" = "आदेश";
+
+/*  */
+"TV_COMMAND_STATUS" = "आदेश स्थिति";
+
+/*  */
+"TV_INITIATED_ON" = "पर शुरू किया गया";
+
+/*  */
+"TV_PROCESSED_ON" = "पर पूरा हुआ";
+
+/*  */
+"TV_STARTUP_SCREEN" = "स्टार्टअप स्क्रीन";
+
+/*  */
+"TV_TRIP_NAME" = "यात्रा का नाम";
+
+/*  */
+"TV_TRIP_DRIVER_NAME" = "ड्राइवर का नाम";
+
+/*  */
+"TV_TRIP_START_DATETIME" = "यात्रा की शुरुआत";
+
+/*  */
+"TV_TRIP_END_DATETIME" = "यात्रा का अंत";
+
+/*  */
+"TV_TRIP_DURATION" = "यात्रा का समयांतराल";
+
+/*  */
+"TV_VEHICLE_NAME" = "वाहन का नाम";
+
+/*  */
+"TV_NO_TRIPS_AVAILABLE" = "कोई यात्रा उपलब्ध नहीं है";
+
+/* Tabs */
+"TAB_ALL" = "सब (%d)";
+
+/*  */
+"TAB_ACTIVE" = "सक्रिय (%d)";
+
+/*  */
+"TAB_IDLE" = "चाबी शुरू (%d)";
+
+/*  */
+"TAB_STOP" = "रुकें (%d)";
+
+/*  */
+"TAB_UNREACHABLE" = "नहीं पहुंचा जा सकता (%d)";
+
+/*  */
+"TAB_INACTIVE" = "निष्क्रिय (%d)";
+
+/* Alert */
+"ALERT_LOGOUT" = "क्या आप लॉग आउट करना चाहते हैं?";
+
+/*  */
+"ALERT_BUTTON_YES" = "हाँ";
+
+/*  */
+"ALERT_BUTTON_NO" = "नहीं";
+
+/*  */
+"ALERT_BUTTON_OK" = "ठीक है";
+
+/*  */
+"ALERT_BUTTON_CANCEL" = "रद्द करना";
+
+/*  */
+"ALERT_RETRY" = "पुन: प्रयास करें";
+
+/*  */
+"ALERT_SAVE_SETTINGS" = "सफलतापूर्वक सेटिंग्स सहेज ली गईं";
+
+/*  */
+"ALERT_TRIP" = "क्या आप वाकई इस यात्रा को %@ चाहते हैं?";
+
+/*  */
+"ALERT_DELETE" = "हटाना";
+
+/*  */
+"ALERT_STOP" = "रोकना";
+
+"ERROR_VALID_MOBILE_NUMBER" = "कृपया मान्य मोबाइल नंबर दर्ज करें";

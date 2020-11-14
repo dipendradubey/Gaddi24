@@ -1,0 +1,449 @@
+/*
+ * Loco ios export: iOS Localizable.strings
+ * Project: strings (1).xml conversion
+ * Release: Working copy
+ * Locale: en, English
+ * Exported by: Unregistered user
+ * Exported at: Wed, 07 Oct 2020 22:06:46 +0530
+ */
+
+"ITEM_HISTORY" = "પ્લેબેક";
+"ITEM_ENGINE" = "એંજિન";
+"BTN_LOGIN" = "પ્રવેશ કરો";
+
+/*  */
+"BTN_SEND_MESSAGE" = "સંદેશ મોકલો";
+
+/*  */
+"BTN_UPDATE_PASSWORD" = "પાસવર્ડ અપડેટ કરો";
+
+/*  */
+"BTN_SAVE_SETTINGS" = "સેટિંગ્સ સાચવો";
+
+/*  */
+"BTN_TRACK_VEHICLE" = "વાહન ટ્રેક કરો";
+
+/*  */
+"BTN_HIDE" = "છુપાવો ";
+
+/*  */
+"BTN_DONT_SHOW_AGAIN" = "ફરીથી બતાવશો નહીં";
+
+/*  */
+"BTN_RENEW" = "નવીકરણ";
+
+/*  */
+"BTN_CREATE_TRIP" = "સફર બનાવો";
+
+/*  */
+"BTN_UPDATE_TRIP" = "સફર અપડેટ કરો";
+
+/* Menu Item */
+"ITEM_TRIPS" = "સફરો";
+
+/*  */
+"ITEM_REPORTS" = "અહેવાલ";
+
+/*  */
+"ITEM_CONTACT_US" = "અમારો સંપર્ક કરો";
+
+/*  */
+"ITEM_MY_ACCOUNT" = "મારું ખાતું";
+
+/*  */
+"ITEM_PAY" = "હવે પૈસા આપો";
+
+/*  */
+"ITEM_SETTINGS" = "સેટિંગ્સ";
+
+/*  */
+"ITEM_LOGOUT" = "બહાર નીકળો";
+
+/*  */
+"ITEM_BIRDVIEW" = "ઉંચાઈ થી જુઓ";
+
+/*  */
+"ITEM_NOTIFICATION" = "સૂચનાઓ";
+
+/*  */
+"ITEM_HOME" = "ડેશબોર્ડ";
+
+/*  */
+"ITEM_SHARE_LINK" = "લિંક્સ શેર કરો";
+
+/*  */
+"ITEM_TRACK" = "ટ્રેક";
+
+/*  */
+"ITEM_PLAYBACK" = "પ્લેબેક";
+
+/*  */
+"ITEM_COMMAND" = "આદેશ";
+
+/*  */
+"ITEM_SUMMARY" = "સારાંશ";
+
+/*  */
+"ITEM_VEHICLE" = "વાહન";
+
+/*  */
+"ITEM_SPEED" = "ગતિ";
+
+/*  */
+"ITEM_DATE" = "તારીખ";
+
+/*  */
+"ITEM_NORMAL" = "સામાન્ય";
+
+/*  */
+"ITEM_SATELLITE" = "સેટેલાઈટ";
+
+/*  */
+"ITEM_TERRAIN" = "વિસ્તાર";
+
+/*  */
+"ITEM_VERY_SLOW" = "ખૂબ ધીમું";
+
+/*  */
+"ITEM_SLOW" = "ધીમું";
+
+/*  */
+"ITEM_FAST" = "ઝડપી";
+
+/*  */
+"ITEM_VERY_FAST" = "ખૂબ ઝડપી";
+
+/*  */
+"ITEM_TODAY" = "આજે";
+
+/*  */
+"ITEM_YESTERDAY" = "ગઇકાલે";
+
+/*  */
+"ITEM_BEFORE_YESTERDAY" = "ગઈકાલ પહેલા";
+
+/*  */
+"ITEM_HOUR_AGO" = "કલાક પહેલા";
+
+/*  */
+"ITEM_USER_DEFINED" = "વપરાશકર્તા વ્યાખ્યાયિત";
+
+/*  */
+"ITEM_ONE_DAY" = "1 દિવસ";
+
+/*  */
+"ITEM_TWO_DAY" = "2 દિવસ";
+
+/*  */
+"ITEM_WEEK" = "અઠવાડિયું";
+
+/*  */
+"ITEM_SEARCH" = "સ્થાન શોધો";
+
+/*  */
+"ITEM_EDIT_TRIP" = "સફર સંપાદિત કરો";
+
+/*  */
+"ITEM_STOP_TRIP" = "સફરને રોકો";
+
+/*  */
+"ITEM_DELETE_TRIP" = "સફરને કાઢી નાખો";
+
+/*  */
+"ITEM_GENERATE_TRIP_REPORT" = "રિપોર્ટ બનાવો";
+
+/* Share Link Menu Item */
+"TODAY" = "આજે";
+
+/* Radio Button Item */
+"RB_10" = "10 સેકન્ડ";
+
+/*  */
+"RB_20" = "20 સેકન્ડ";
+
+/*  */
+"RB_30" = "30 સેકન્ડ";
+
+/*  */
+"RB_60" = "60 સેકન્ડ";
+
+/*  */
+"SECONDS" = "સેકન્ડ";
+
+/*  */
+"RB_DASHBOARD" = "ડેશબોર્ડ";
+
+/*  */
+"RB_BIRDVIEW" = "પક્ષી દૃશ્ય";
+
+/* Checkbox Item */
+"CB_NOTIFICATION" = "સૂચના બતાઓ";
+
+/* Navigation Drawer */
+"NAVIGATION_OPEN" = "ડ્રોઅર ખોલો";
+
+/*  */
+"NAVIGATION_CLOSE" = "ડ્રોઅર બંધ કરો";
+
+/* Title */
+"TITLE_DASHBOARD" = "ડેશબોર્ડ";
+
+/*  */
+"TITLE_REPORTS" = "અહેવાલો";
+
+/*  */
+"TITLE_CONTACT_US" = "અમને સંપર્ક કરો";
+
+/*  */
+"TITLE_MY_ACCOUNT" = "મારું ખાતું";
+
+/*  */
+"TITLE_SETTINGS" = "સેટિંગ્સ";
+
+/*  */
+"TITLE_NOTIFICATIONS" = "સૂચનાઓ";
+
+/*  */
+"TITLE_BIRDVIEW" = "પક્ષી દૃશ્ય";
+
+/*  */
+"TITLE_TRIPS" = "સફર";
+
+/* Hint */
+"HINT_USERNAME" = "વપરાશકર્તા નામ";
+
+/*  */
+"HINT_PASSWORD" = "પાસવર્ડ";
+
+/*  */
+"HINT_MESSAGE" = "તમારો સંદેશ અહીં લખો";
+
+/*  */
+"HINT_OLD_PASSWORD" = "જુનો પાસવર્ડ";
+
+/*  */
+"HINT_NEW_PASSWORD" = "નવો પાસવર્ડ";
+
+/*  */
+"HINT_CONFIRM_PASSWORD" = "પાસવર્ડની પુષ્ટિ કરો";
+
+/*  */
+"HINT_SEARCH" = " \tવાહન શોધો";
+
+/*  */
+"HINT_TRIP_NAME" = "સફરનું નામ";
+
+/*  */
+"HINT_DRIVER_NAME" = "ડ્રાઇવરનું નામ";
+
+/*  */
+"HINT_DRIVER_NUMBER" = "ડ્રાઇવરનો મોબાઇલ નંબર";
+
+/*  */
+"HINT_TRIP_DESCRIPTION" = "સફર વર્ણન";
+
+/*  */
+"HINT_TRIP_START_DATE_TIME" = "સફરની શરૂઆત";
+
+/* Error Messages */
+"CONNECTION_ERROR" = "ઇન્ટરનેટ કનેક્શન ઑફલાઇન લાગે છે.";
+
+/*  */
+"SERVER_ERROR" = "અમને સર્વરથી કનેક્ટ કરવામાં મુશ્કેલી આવી રહી છે. પછીથી ફરી પ્રયત્ન કરો.";
+
+/*  */
+"ERROR_USERNAME" = "કૃપા કરીને વપરાશકર્તા નામ દાખલ કરો";
+
+/*  */
+"ERROR_PASSWORD" = "કૃપા કરીને પાસવર્ડ દાખલ કરો";
+
+/*  */
+"ERROR_INVALID_CREDENTIALS" = "અમાન્ય વપરાશકર્તાનામ અથવા પાસવર્ડ";
+
+/*  */
+"ERROR_MESSAGE" = "કૃપા કરીને સંદેશ દાખલ કરો";
+
+/*  */
+"ERROR_OLD_PASSWORD" = "કૃપા કરીને જૂનો પાસવર્ડ દાખલ કરો";
+
+/*  */
+"ERROR_NEW_PASSWORD" = "કૃપા કરી નવો પાસવર્ડ દાખલ કરો";
+
+/*  */
+"ERROR_CONFIRM_PASSWORD" = "કૃપા કરીને પાસવર્ડની પુષ્ટિ કરો";
+
+/*  */
+"ERROR_NO_PASSWORD_MATCH" = "પાસવર્ડ્સ મેળ ખાતા નથી";
+
+/*  */
+"ERROR_NO_NOTIFICATIONS" = "કોઈ સૂચનાઓ નથી";
+
+/*  */
+"ERROR_FAIl_TO_MARK_AS_READ" = "નિષ્ફળ તરીકે માર્ક કરો. ફરીથી પ્રયત્ન કરો.";
+
+/*  */
+"ERROR_VEHICLE_ID" = "કૃપા કરીને વાહન પસંદ કરો";
+
+/*  */
+"ERROR_INPUT_FIELD" = "કૃપા કરીને %@ દાખલ કરો";
+
+/*  */
+"ERROR_END_START_DATE" = "પ્રારંભ તારીખ સમાપ્તિ તારીખ કરતા મોટી ન હોઇ શકે";
+
+/*  */
+"ERROR_NO_REPORTS" = "કોઈ અહેવાલો નથી";
+
+/*  */
+"ERROR_NO_PLAYBACK" = "પસંદ કરેલા સમયગાળા માટે કોઈ મૂવિંગ ડેટા ઉપલબ્ધ નથી.";
+
+/*  */
+"ERROR_FAIL_ACTIVE_PARKINGMODE" = "પાર્કિંગ મોડને સક્રિય કરવામાં નિષ્ફળ";
+
+/*  */
+"ERROR_FAIL_DEACTIVE_PARKINGMODE" = "પાર્કિંગ મોડને નિષ્ક્રિય કરવામાં નિષ્ફળ";
+
+/*  */
+"ERROR_END_START_DATETIME" = "પ્રારંભ તારીખ સમય સમાપ્તિ તારીખ સમય કરતા વધુ હોઈ શકતો નથી";
+
+/*  */
+"ERROR_TRIP_NAME" = "કૃપા કરીને સફરનું નામ દાખલ કરો";
+
+/* Textview */
+"TV_APP_VERSION" = "સંસ્કરણ %@";
+
+/*  */
+"TV_AUTO_REFRESH" = "સ્વત. તાજું કરો";
+
+/*  */
+"TV_NOTIFICATIONS" = "સૂચનાઓ";
+
+/*  */
+"TV_NAME" = "નામ:";
+
+/*  */
+"TV_ADDRESS" = "સરનામું:";
+
+/*  */
+"TV_SUPPORT" = "આધાર:";
+
+/*  */
+"TV_EMAIL" = "ઇમેઇલ:";
+
+/*  */
+"TV_VIEW_DETAILS" = "<u>વિગતો જુઓ</u>";
+
+/*  */
+"TV_START_DATE_TIME" = "પ્રારંભ સમય";
+
+/*  */
+"TV_END_DATE_TIME" = "સમાપ્તિ સમય";
+
+/*  */
+"TV_CUT_OFF_ENGINE" = "એન્જિન બંધ કરો";
+
+/*  */
+"TV_RESTORE_ENGINE" = "એન્જિન ચાલુ કરો";
+
+/*  */
+"TV_CUT_OFF_AC" = "એ.સી બંધ કરો";
+
+/*  */
+"TV_RESTORE_AC" = "એ.સી ચાલુ કરો";
+
+/*  */
+"TV_COMMAND_COUNTDOWN" = "કૃપા કરીને આદેશ એક્સેસ કરવા માટે %d સેકંડની રાહ જુઓ";
+
+/*  */
+"TV_DATE_INFO" = "- અહીંથી તારીખ પસંદ કરો";
+
+/*  */
+"TV_SPEED_INFO" = "- અહીંથી ગતિ પસંદ કરો";
+
+/*  */
+"TV_LANGUAGE" = "ભાષા";
+
+/*  */
+"TV_COMMAND" = "આદેશ";
+
+/*  */
+"TV_COMMAND_STATUS" = "આદેશ સ્થિતિ";
+
+/*  */
+"TV_INITIATED_ON" = "પર શરૂ કર્યું";
+
+/*  */
+"TV_PROCESSED_ON" = "પર પૂરું થાયૂ";
+
+/*  */
+"TV_STARTUP_SCREEN" = "સ્ટાર્ટઅપ સ્ક્રીન";
+
+/*  */
+"TV_TRIP_NAME" = "સફરનું નામ";
+
+/*  */
+"TV_TRIP_DRIVER_NAME" = "ડ્રાઇવરનું નામ";
+
+/*  */
+"TV_TRIP_START_DATETIME" = "સફરની શરૂઆત";
+
+/*  */
+"TV_TRIP_END_DATETIME" = "સફરનો અંત";
+
+/*  */
+"TV_TRIP_DURATION" = "સફરનો સમયગાળો";
+
+/*  */
+"TV_VEHICLE_NAME" = "વાહનનું નામ";
+
+/*  */
+"TV_NO_TRIPS_AVAILABLE" = "કોઈ સફર ઉપલબ્ધ નથી";
+
+/* Tabs */
+"TAB_ALL" = "બધા (%d)";
+
+/*  */
+"TAB_ACTIVE" = "સક્રિય (%d)";
+
+/*  */
+"TAB_IDLE" = "ચાવી શરૂ (%d)";
+
+/*  */
+"TAB_STOP" = "વિરામ (%d)";
+
+/*  */
+"TAB_UNREACHABLE" = "પોહચી ના શકાય તેવું (%d)";
+
+/*  */
+"TAB_INACTIVE" = "નિષ્ક્રિય (%d)";
+
+/* Alert */
+"ALERT_LOGOUT" = "શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો?";
+
+/*  */
+"ALERT_BUTTON_YES" = "હા";
+
+/*  */
+"ALERT_BUTTON_NO" = "ના";
+
+/*  */
+"ALERT_BUTTON_OK" = "સારું";
+
+/*  */
+"ALERT_BUTTON_CANCEL" = "રદ કરવું";
+
+/*  */
+"ALERT_RETRY" = "ફરી પ્રયાસ કરો";
+
+/*  */
+"ALERT_SAVE_SETTINGS" = "સફળતાપૂર્વક સેટિંગ્સ સાચવી";
+
+/*  */
+"ALERT_TRIP" = "શું તમે ખરેખર આ સફરને %@ માંગો છો?";
+
+/*  */
+"ALERT_DELETE" = "કાઢી નાખવા";
+
+/*  */
+"ALERT_STOP" = "રોકવા";
+
+"ERROR_VALID_MOBILE_NUMBER" = "કૃપા કરી માન્ય મોબાઇલ નંબર દાખલ કરો";

@@ -1,0 +1,6 @@
+module Pods_Gaddi24 {
+  umbrella header "Pods-Gaddi24-umbrella.h"
+
+  export *
+  module * { export * }
+}
