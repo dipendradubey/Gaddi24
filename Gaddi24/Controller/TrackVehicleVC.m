@@ -69,6 +69,7 @@
     
     GMSMarker  *marker;
 
+    UIImageView *markerImgView;
 
 
     //CLLocationManager *locationManager;
@@ -193,6 +194,10 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     [rightbarButton setCustomView:rightButton1];
     self.navigationItem.rightBarButtonItem=rightbarButton;
     
+    
+    markerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    markerImgView.image = [Util mapImage:self.selectedVehicleDict[@"VehicleType"]];
+    markerImgView.contentMode = UIViewContentModeScaleAspectFit;
     
     //Creating connection object
     connectionHandler = [[ConnectionHandler alloc]init];
@@ -444,41 +449,21 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     [self.mapView animateToCameraPosition:camera];
     
     if (!marker){
-           marker = [[GMSMarker alloc] init];
-           marker.position = coordinate;
-           marker.icon = [UIImage imageNamed:@"unreachable_car.png"];
-           
-           //Active
-           if ([self.vehicleDataDict[@"VehicleState"] intValue]==1) {
-               marker.icon = [UIImage imageNamed:@"active_car.png"];
-           }
-           //Idle
-           else if ([self.vehicleDataDict[@"VehicleState"] intValue]==2){
-               marker.icon = [UIImage imageNamed:@"idel_car.png"];
-           }
-           else if ([self.vehicleDataDict[@"VehicleState"] intValue]==3){
-               marker.icon = [UIImage imageNamed:@"stop_car.png"];
-           }
-            marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
-            marker.map = self.mapView;
+        marker = [[GMSMarker alloc] init];
+        marker.position = coordinate;
+        markerImgView.image = [Util mapImage:self.vehicleDataDict[@"VehicleType"]];
+        marker.iconView = markerImgView;
+        markerImgView.tintColor = [Util vehicleColor:self.vehicleDataDict];
+        marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
+        marker.map = self.mapView;
        }else{
            [CATransaction begin];
            [CATransaction setAnimationDuration:[[Util retrieveDefaultForKey:kTimeInterval] integerValue]]; //animationduration
            marker.position = coordinate;
+           markerImgView.image = [Util mapImage:self.vehicleDataDict[@"VehicleType"]];
+           marker.iconView = markerImgView;
+           markerImgView.tintColor = [Util vehicleColor:self.vehicleDataDict];
            marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
-           marker.icon = [UIImage imageNamed:@"unreachable_car.png"];
-           
-           //Active
-           if ([self.vehicleDataDict[@"VehicleState"] intValue]==1) {
-               marker.icon = [UIImage imageNamed:@"active_car.png"];
-           }
-           //Idle
-           else if ([self.vehicleDataDict[@"VehicleState"] intValue]==2){
-               marker.icon = [UIImage imageNamed:@"idel_car.png"];
-           }
-           else if ([self.vehicleDataDict[@"VehicleState"] intValue]==3){
-               marker.icon = [UIImage imageNamed:@"stop_car.png"];
-           }
            [CATransaction commit];
        }
     
@@ -645,7 +630,7 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
         
         if (indexPath.row == 0) {
             
-            fontawsomeCode = @"\uf0d1";
+            //fontawsomeCode = @"\uf0d1";
             
             [cell.view1 updateStyleWithInfo:@{kBorderColor:[UIColor clearColor],kCornerRadius:@(cell.view1.frame.size.width/2),kBorderWidth:@0}];
             
@@ -666,7 +651,9 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
                 title = @"Stop";
             }
             
-             cell.view1.hidden = NO;
+             //cell.view1.hidden = NO;
+            image = [Util normalImage:self.vehicleDataDict[@"VehicleType"]];
+            cell.imageView1.tintColor = [Util vehicleColor:self.vehicleDataDict];
             
         }
         else if (indexPath.row==1 && [self.vehicleDataDict[@"BatteryStatus"] intValue]) {

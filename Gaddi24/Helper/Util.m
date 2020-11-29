@@ -444,10 +444,7 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
              //Handle error
 
          }
-
      }];
-    
-   
 
 }
 
@@ -465,6 +462,45 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
     [scanner scanHexInt:&unicode];
     NSString *stringWithUnicodeChar = [NSString stringWithFormat:@"%C", (unichar)unicode];
     return stringWithUnicodeChar;
+}
+
++(UIImage *)normalImage:(NSString *)imageName{
+    UIImage *defaultImage = [UIImage imageNamed:[imageName lowercaseString]];
+    if(defaultImage == nil)
+        defaultImage = [UIImage imageNamed:@"car"];
+    return defaultImage;
+}
+
++(UIImage *)mapImage:(NSString *)imageName{
+    NSString *mapImageName = [NSString stringWithFormat:@"%@_map",
+                              [imageName lowercaseString]];
+    UIImage *defaultImage = [UIImage imageNamed:mapImageName];
+    if(defaultImage == nil)
+        defaultImage = [UIImage imageNamed:@"car_map"];
+    return defaultImage;
+}
+
++(UIColor *)vehicleColor:(NSDictionary *)dict{
+    
+    UIColor *defaultColor = [UIColor colorWithRed:143/255.0f green:144/255.0f blue:145/255.0f alpha:1];
+    
+    //Active
+    if ([dict[@"VehicleState"] intValue]==1) {
+        defaultColor = [UIColor colorWithRed:107/255.0f green:205/255.0f blue:78/255.0f alpha:1];
+    }
+    //Idle
+    else if ([dict[@"VehicleState"] intValue]==2){
+        defaultColor = [UIColor colorWithRed:255/255.0f green:143/255.0f blue:51/255.0f alpha:1];
+    }
+    //Inactive
+    else if ([dict[@"VehicleState"] intValue]==4){
+        defaultColor = [UIColor colorWithRed:39/255.0f green:41/255.0f blue:47/255.0f alpha:1];
+       }
+    else if ([dict[@"VehicleState"] intValue]==3){
+        defaultColor = [UIColor redColor];
+    }
+    
+    return defaultColor;
 }
 
 @end

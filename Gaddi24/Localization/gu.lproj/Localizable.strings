@@ -1,14 +1,13 @@
 /*
  * Loco ios export: iOS Localizable.strings
- * Project: strings (1).xml conversion
+ * Project: strings (4).xml conversion
  * Release: Working copy
  * Locale: en, English
  * Exported by: Unregistered user
- * Exported at: Wed, 07 Oct 2020 22:06:46 +0530
+ * Exported at: Sat, 21 Nov 2020 19:34:04 +0530
  */
 
-"ITEM_HISTORY" = "પ્લેબેક";
-"ITEM_ENGINE" = "એંજિન";
+/* Button */
 "BTN_LOGIN" = "પ્રવેશ કરો";
 
 /*  */
@@ -24,7 +23,7 @@
 "BTN_TRACK_VEHICLE" = "વાહન ટ્રેક કરો";
 
 /*  */
-"BTN_HIDE" = "છુપાવો ";
+"BTN_HIDE" = "છુપાવો";
 
 /*  */
 "BTN_DONT_SHOW_AGAIN" = "ફરીથી બતાવશો નહીં";
@@ -144,13 +143,22 @@
 "ITEM_EDIT_TRIP" = "સફર સંપાદિત કરો";
 
 /*  */
+"ITEM_START_TRIP" = "સફર શરૂ કરો";
+
+/*  */
 "ITEM_STOP_TRIP" = "સફરને રોકો";
 
 /*  */
 "ITEM_DELETE_TRIP" = "સફરને કાઢી નાખો";
 
 /*  */
+"ITEM_EMAIL_TRIP" = "સફરને ઇમેઇલ કરો";
+
+/*  */
 "ITEM_GENERATE_TRIP_REPORT" = "રિપોર્ટ બનાવો";
+
+/*  */
+"ITEM_MARK_READ" = "વાંચો તરીકે ચિહ્નિત કરો";
 
 /* Share Link Menu Item */
 "TODAY" = "આજે";
@@ -178,6 +186,9 @@
 
 /* Checkbox Item */
 "CB_NOTIFICATION" = "સૂચના બતાઓ";
+
+/*  */
+"CB_SEND_SMS" = "સંદેશ મોકલો";
 
 /* Navigation Drawer */
 "NAVIGATION_OPEN" = "ડ્રોઅર ખોલો";
@@ -209,6 +220,9 @@
 /*  */
 "TITLE_TRIPS" = "સફર";
 
+/*  */
+"TITLE_TRIP_DETAIL" = "સફરની વિગતો";
+
 /* Hint */
 "HINT_USERNAME" = "વપરાશકર્તા નામ";
 
@@ -228,7 +242,7 @@
 "HINT_CONFIRM_PASSWORD" = "પાસવર્ડની પુષ્ટિ કરો";
 
 /*  */
-"HINT_SEARCH" = " \tવાહન શોધો";
+"HINT_SEARCH" = "tવાહન શોધો";
 
 /*  */
 "HINT_TRIP_NAME" = "સફરનું નામ";
@@ -244,6 +258,21 @@
 
 /*  */
 "HINT_TRIP_START_DATE_TIME" = "સફરની શરૂઆત";
+
+/*  */
+"HINT_TRIP_END_DATE_TIME" = "સફરનો અંત";
+
+/*  */
+"HINT_TRIP_CUST_NAME" = "ગ્રાહક નું નામ";
+
+/*  */
+"HINT_TRIP_CUST_NUMBER" = "ગ્રાહકનો મોબાઇલ નંબર";
+
+/*  */
+"HINT_TRIP_CUST_EMAIL" = "ગ્રાહકનું ઇમેઇલ";
+
+/*  */
+"HINT_TRIP_RATE_PER_KM" = "કિલોમીટર દીઠ ભાવ";
 
 /* Error Messages */
 "CONNECTION_ERROR" = "ઇન્ટરનેટ કનેક્શન ઑફલાઇન લાગે છે.";
@@ -297,16 +326,28 @@
 "ERROR_NO_PLAYBACK" = "પસંદ કરેલા સમયગાળા માટે કોઈ મૂવિંગ ડેટા ઉપલબ્ધ નથી.";
 
 /*  */
-"ERROR_FAIL_ACTIVE_PARKINGMODE" = "પાર્કિંગ મોડને સક્રિય કરવામાં નિષ્ફળ";
+"ERROR_FAIL_ACTIVATE_PARKING_MODE" = "પાર્કિંગ મોડને સક્રિય કરવામાં નિષ્ફળ";
 
 /*  */
-"ERROR_FAIL_DEACTIVE_PARKINGMODE" = "પાર્કિંગ મોડને નિષ્ક્રિય કરવામાં નિષ્ફળ";
+"ERROR_FAIL_DEACTIVATE_PARKING_MODE" = "પાર્કિંગ મોડને નિષ્ક્રિય કરવામાં નિષ્ફળ";
 
 /*  */
 "ERROR_END_START_DATETIME" = "પ્રારંભ તારીખ સમય સમાપ્તિ તારીખ સમય કરતા વધુ હોઈ શકતો નથી";
 
 /*  */
 "ERROR_TRIP_NAME" = "કૃપા કરીને સફરનું નામ દાખલ કરો";
+
+/*  */
+"ERROR_VALID_MOBILE_NUMBER" = "કૃપા કરી માન્ય મોબાઇલ નંબર દાખલ કરો";
+
+/*  */
+"ERROR_TRIP_DESCRIPTION" = "કૃપા કરીને સફર વર્ણન દાખલ કરો";
+
+/*  */
+"ERROR_VALID_EMAIL" = "કૃપા કરીને માન્ય ઇમેઇલ દાખલ કરો";
+
+/*  */
+"ERROR_NO_VEHICLES_TRIP" = "સફર બનાવવા માટે કોઈ વાહનો ઉપલબ્ધ નથી";
 
 /* Textview */
 "TV_APP_VERSION" = "સંસ્કરણ %@";
@@ -398,6 +439,30 @@
 /*  */
 "TV_NO_TRIPS_AVAILABLE" = "કોઈ સફર ઉપલબ્ધ નથી";
 
+/*  */
+"TV_DISTANCE_LABEL" = "અંતર";
+
+/*  */
+"TV_FUEL_LABEL" = "ઇંધણ";
+
+/*  */
+"TV_MAX_SPEED" = "અધિકતમ ગતિ";
+
+/*  */
+"TV_TRIP_CUST_NUMBER" = "મોબાઇલ નંબર";
+
+/*  */
+"TV_TRIP_CUST_NAME" = "ગ્રાહક નું નામ";
+
+/*  */
+"TV_TOTAL_MOVING" = "કુલ ગતિમાન સમય";
+
+/*  */
+"TV_TOTAL_STOP" = "કુલ વિરામ નો સમય";
+
+/*  */
+"TV_TOTAL_IDLE" = "કુલ ચાવી શરૂ રેહવા નો સમય";
+
 /* Tabs */
 "TAB_ALL" = "બધા (%d)";
 
@@ -446,4 +511,8 @@
 /*  */
 "ALERT_STOP" = "રોકવા";
 
-"ERROR_VALID_MOBILE_NUMBER" = "કૃપા કરી માન્ય મોબાઇલ નંબર દાખલ કરો";
+/*  */
+"ALERT_MARK_ALL_READ" = "બધી સૂચનાઓ વાંચેલી તરીકે ચિહ્નિત કરો";
+
+"ITEM_HISTORY" = "પ્લેબેક";
+"ITEM_ENGINE" = "એંજિન";

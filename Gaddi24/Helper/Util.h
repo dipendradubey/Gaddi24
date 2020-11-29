@@ -37,6 +37,9 @@
 +(id)checkNullValue:(id)value;
 + (UIColor *)colorWithHexString:(NSString *)str_HEX;
 +(NSString *)fetchFontAwesomeString:(NSString *)unicodeString;
++(UIImage *)normalImage:(NSString *)imageName;
++(UIImage *)mapImage:(NSString *)imageName;
++(UIColor *)vehicleColor:(NSDictionary *)dict;
 
 
 @end

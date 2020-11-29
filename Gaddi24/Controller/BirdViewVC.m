@@ -204,24 +204,6 @@ static NSString * const kGeoAddress = @"kGeoAddress";
         
         MarkerView *markerView = [[[NSBundle mainBundle] loadNibNamed:@"VehicleSmallView" owner:self options:nil] objectAtIndex:0];
         
-       
-            markerView.imageView2.image = [UIImage imageNamed:@"unreachable_car.png"];
-
-        
-        //Active
-        if ([dict[@"VehicleState"] intValue]==1) {
-             markerView.imageView2.image = [UIImage imageNamed:@"active_car.png"];
-        }
-        //Idle
-        else if ([dict[@"VehicleState"] intValue]==2){
-             markerView.imageView2.image = [UIImage imageNamed:@"idel_car.png"];
-        }
-        //Unreachable
-        else if ([dict[@"VehicleState"] intValue]==3){
-             markerView.imageView2.image = [UIImage imageNamed:@"stop_car.png"];
-        }
-        
-        
         markerView.lbl1.frame = CGRectMake(10, 10, 320, 11);
         markerView.lbl1.text = dict[@"VehicleName"];
         markerView.lbl1.numberOfLines = 0;
@@ -235,6 +217,11 @@ static NSString * const kGeoAddress = @"kGeoAddress";
         markerView.imageView1.frame = CGRectMake(triangleOrignin, 21, 20, 20);
         
         CGFloat vehicleOrignin = markerView.view1.center.x-(markerView.imageView2.frame.size.width)/2;//sice vehicle xorigin = markerView.view1.center.x - vehicle.width/2
+        
+        
+        markerView.imageView2.image = [Util mapImage:dict[@"VehicleType"]];
+        markerView.imageView2.contentMode = UIViewContentModeScaleAspectFit;
+        markerView.imageView2.tintColor = [Util vehicleColor:dict];
         markerView.imageView2.frame = CGRectMake(vehicleOrignin, 36, 30, 30);
         markerView.imageView2.transform = CGAffineTransformMakeRotation([dict[@"Direction"] floatValue]); //DKD added on 27Feb2020 as need tp show vehicle direction.
         

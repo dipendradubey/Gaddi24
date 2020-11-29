@@ -1166,12 +1166,12 @@
                                                                 <constraint firstAttribute="height" constant="10" id="SvU-V7-5ke"/>
                                                             </constraints>
                                                         </view>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="ac_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="t23-4C-twb">
-                                                            <rect key="frame" x="30.5" y="8" width="25" height="25"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="ac_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="t23-4C-twb">
+                                                            <rect key="frame" x="18" y="8" width="50" height="25"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="nUf-Fa-ecx"/>
-                                                                <constraint firstAttribute="width" constant="25" id="rf4-N3-2K6"/>
+                                                                <constraint firstAttribute="width" constant="50" id="rf4-N3-2K6"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 km/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMF-43-Cgg">
@@ -1743,12 +1743,12 @@
                                         <size key="customSize" width="95" height="40"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="Uke-ej-pbq"/>
-                                                <exclude reference="iof-To-hxb"/>
-                                                <exclude reference="Rla-S5-ILY"/>
-                                                <exclude reference="wRo-f6-Sfh"/>
                                                 <exclude reference="Fac-Gj-7QH"/>
+                                                <exclude reference="Rla-S5-ILY"/>
+                                                <exclude reference="Uke-ej-pbq"/>
                                                 <exclude reference="fv3-WS-mDf"/>
+                                                <exclude reference="iof-To-hxb"/>
+                                                <exclude reference="wRo-f6-Sfh"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1852,12 +1852,12 @@
                                         <size key="customSize" width="126" height="118"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="vVc-wH-HYy"/>
-                                                <exclude reference="qlp-JB-xmz"/>
-                                                <exclude reference="dXi-3A-Sty"/>
-                                                <exclude reference="GKs-SO-fIa"/>
-                                                <exclude reference="xdB-tK-DUf"/>
                                                 <exclude reference="EKp-yp-dbO"/>
+                                                <exclude reference="GKs-SO-fIa"/>
+                                                <exclude reference="dXi-3A-Sty"/>
+                                                <exclude reference="qlp-JB-xmz"/>
+                                                <exclude reference="vVc-wH-HYy"/>
+                                                <exclude reference="xdB-tK-DUf"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1870,8 +1870,8 @@
                                 </cells>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="ROg-ha-cin"/>
                                         <exclude reference="82G-86-bp6"/>
+                                        <exclude reference="ROg-ha-cin"/>
                                     </mask>
                                 </variation>
                                 <connections>

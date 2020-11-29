@@ -433,7 +433,8 @@ static const NSInteger NOTIFICATION_TAG = 1021;
     cell.customButton1.infoDict = dict;
     [cell.customButton1 setTitle:[@"BTN_RENEW" localizableString:@""] forState:UIControlStateNormal];
     
-    
+    cell.imageView3.image = [Util normalImage:dict[@"VehicleType"]];
+    cell.imageView3.tintColor = cell.view1.backgroundColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;

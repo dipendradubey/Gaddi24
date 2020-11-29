@@ -411,7 +411,12 @@ static const CGFloat VERY_FAST = 0.05;
     if (!marker) {
         marker = [[GMSMarker alloc] init];
         marker.position = coordinate;
-        marker.icon = [UIImage imageNamed:@"vehicle_icon.png"];
+       UIImageView *markerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        markerImgView.image = [Util mapImage:self.selectedVehicleDict[@"VehicleType"]];
+        markerImgView.contentMode = UIViewContentModeScaleAspectFit;
+        markerImgView.tintColor = [UIColor colorWithRed:39/255.0f green:41/255.0f blue:47/255.0f alpha:1];
+        marker.iconView = markerImgView;
+        //marker.icon = [UIImage imageNamed:@"vehicle_icon.png"];
         marker.map = self.mapView;
         marker.rotation = [pointDict[@"Direction"] floatValue];
         

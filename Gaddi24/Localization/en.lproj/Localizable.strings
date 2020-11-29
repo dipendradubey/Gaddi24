@@ -1,18 +1,14 @@
 /*
  * Loco ios export: iOS Localizable.strings
- * Project: strings.xml conversion
+ * Project: strings (3).xml conversion
  * Release: Working copy
  * Locale: en, English
  * Exported by: Unregistered user
- * Exported at: Wed, 07 Oct 2020 22:00:30 +0530
+ * Exported at: Sat, 21 Nov 2020 19:28:41 +0530
  */
 
 /* string name="MAP_API_KEY">AIzaSyBVrQC5_2xCY6tX8ibJmVZqKsNtjETyeZE</string
 Button */
-
-"ITEM_HISTORY" = "History";
-"ITEM_ENGINE" = "Engine";
-
 "BTN_LOGIN" = "LOGIN";
 
 /*  */
@@ -28,7 +24,7 @@ Button */
 "BTN_TRACK_VEHICLE" = "Track Vehicle";
 
 /*  */
-"BTN_HIDE" = "HIDE ";
+"BTN_HIDE" = "HIDE";
 
 /*  */
 "BTN_DONT_SHOW_AGAIN" = "Don't show again";
@@ -71,6 +67,9 @@ Button */
 
 /*  */
 "ITEM_HOME" = "Dashboard";
+
+/*  */
+"ITEM_MARK_READ" = "Mark as Read";
 
 /*  */
 "ITEM_SHARE_LINK" = "Share Link";
@@ -148,10 +147,16 @@ Button */
 "ITEM_EDIT_TRIP" = "Edit Trip";
 
 /*  */
+"ITEM_START_TRIP" = "Start Trip";
+
+/*  */
 "ITEM_STOP_TRIP" = "Stop Trip";
 
 /*  */
 "ITEM_DELETE_TRIP" = "Delete Trip";
+
+/*  */
+"ITEM_EMAIL_TRIP" = "Email Trip";
 
 /*  */
 "ITEM_GENERATE_TRIP_REPORT" = "Generate Trip Report";
@@ -183,6 +188,9 @@ Button */
 /* Checkbox Item */
 "CB_NOTIFICATION" = "Toggle Push Notifications";
 
+/*  */
+"CB_SEND_SMS" = "Send SMS";
+
 /* Navigation Drawer */
 "NAVIGATION_OPEN" = "open drawer";
 
@@ -213,6 +221,9 @@ Button */
 /*  */
 "TITLE_TRIPS" = "Trips";
 
+/*  */
+"TITLE_TRIP_DETAIL" = "Trip Details";
+
 /* Hint */
 "HINT_USERNAME" = "Username";
 
@@ -232,7 +243,7 @@ Button */
 "HINT_CONFIRM_PASSWORD" = "Confirm Password";
 
 /*  */
-"HINT_SEARCH" = " \tSearch Vehicle";
+"HINT_SEARCH" = "Search Vehicle";
 
 /*  */
 "HINT_TRIP_NAME" = "Trip Name";
@@ -248,6 +259,21 @@ Button */
 
 /*  */
 "HINT_TRIP_START_DATE_TIME" = "Trip Start";
+
+/*  */
+"HINT_TRIP_END_DATE_TIME" = "Trip End";
+
+/*  */
+"HINT_TRIP_RATE_PER_KM" = "Rate per Kms";
+
+/*  */
+"HINT_TRIP_CUST_NAME" = "Customer Name";
+
+/*  */
+"HINT_TRIP_CUST_NUMBER" = "Customer Number";
+
+/*  */
+"HINT_TRIP_CUST_EMAIL" = "Customer Email";
 
 /* Error Messages */
 "CONNECTION_ERROR" = "The internet connection appears to be offline.";
@@ -301,16 +327,28 @@ Button */
 "ERROR_NO_PLAYBACK" = "No moving data available for the selected period.";
 
 /*  */
-"ERROR_FAIL_ACTIVE_PARKINGMODE" = "Fail to activate parking mode";
+"ERROR_FAIL_ACTIVATE_PARKING_MODE" = "Fail to activate parking mode";
 
 /*  */
-"ERROR_FAIL_DEACTIVE_PARKINGMODE" = "Fail to deactivate parking mode";
+"ERROR_FAIL_DEACTIVATE_PARKING_MODE" = "Fail to deactivate parking mode";
 
 /*  */
 "ERROR_END_START_DATETIME" = "Start datetime can't be greater than end datetime";
 
 /*  */
 "ERROR_TRIP_NAME" = "Please enter trip name";
+
+/*  */
+"ERROR_VALID_MOBILE_NUMBER" = "Please enter valid mobile number";
+
+/*  */
+"ERROR_TRIP_DESCRIPTION" = "Please enter trip description";
+
+/*  */
+"ERROR_VALID_EMAIL" = "Please enter valid email address";
+
+/*  */
+"ERROR_NO_VEHICLES_TRIP" = "No vehicles available to create trip";
 
 /* Textview */
 "TV_APP_VERSION" = "Version %@";
@@ -402,6 +440,30 @@ Button */
 /*  */
 "TV_NO_TRIPS_AVAILABLE" = "No Trips Available";
 
+/*  */
+"TV_DISTANCE_LABEL" = "Distance";
+
+/*  */
+"TV_FUEL_LABEL" = "Fuel";
+
+/*  */
+"TV_MAX_SPEED" = "Max Speed";
+
+/*  */
+"TV_TRIP_CUST_NAME" = "Customer Name";
+
+/*  */
+"TV_TRIP_CUST_NUMBER" = "Mobile Number";
+
+/*  */
+"TV_TOTAL_MOVING" = "Total Moving Time";
+
+/*  */
+"TV_TOTAL_STOP" = "Total Stop Time";
+
+/*  */
+"TV_TOTAL_IDLE" = "Total Idle Time";
+
 /* Tabs */
 "TAB_ALL" = "All (%d)";
 
@@ -450,4 +512,8 @@ Button */
 /*  */
 "ALERT_STOP" = "stop";
 
-"ERROR_VALID_MOBILE_NUMBER" = "Please enter valid mobile number";
+/*  */
+"ALERT_MARK_ALL_READ" = "Mark all notifications as read";
+
+"ITEM_HISTORY" = "History";
+"ITEM_ENGINE" = "Engine";
