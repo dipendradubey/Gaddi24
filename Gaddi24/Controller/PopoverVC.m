@@ -80,7 +80,7 @@ static NSString * const kFontAwsomeName = @"kFontAwsomeName";
     cell.lbl1.hidden = true;
     
     if (self.showFontAwsome) {
-        cell.constraint1.constant = 68;
+        cell.constraint1.constant = 50;
         cell.lbl1.hidden = false;
     }
     
