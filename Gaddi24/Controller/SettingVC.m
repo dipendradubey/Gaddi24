@@ -15,11 +15,12 @@
 #import "UIViewController+MMDrawerController.h"
 #import "CollectionViewCell.h"
 #import "NSString+Localizer.h"
-
+#import "AppDelegate.h"
 @interface SettingVC ()<UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>{
     NSInteger timeInterval;
     NSInteger homeScreenTag;
     NSInteger languageTag;
+    AppDelegate *appDelegate;
 }
 
 @end
@@ -33,6 +34,9 @@
 }
 
 -(void)initialsetup{
+    
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     self.navigationController.navigationBar.hidden = NO;
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
@@ -183,7 +187,7 @@
         
         [cell.lbl1 setText:[@"TV_STARTUP_SCREEN" localizableString:@""]];
         [cell.btn1 setTitle:[@"ITEM_HOME" localizableString:@""] forState:UIControlStateNormal];
-        [cell.btn2 setTitle:[@"ITEM_BIRDVIEW" localizableString:@""] forState:UIControlStateNormal];
+        [cell.btn2 setTitle:[@"RB_BIRDVIEW" localizableString:@""] forState:UIControlStateNormal];
     }
     
     else if (indexPath.row == 2){
@@ -249,7 +253,11 @@
     
      [[NSNotificationCenter defaultCenter]postNotificationName:@"ReloadMenu" object:nil];
     
-    //NSLog(@"Do nothing");
+    appDelegate.showBirdView = false;
+
+        if([[Util retrieveDefaultForKey:kHomeScreen] integerValue] == BIRDVIEW_TAG){
+            appDelegate.showBirdView = true;
+        }
     [[NSNotificationCenter defaultCenter]postNotificationName:kMenuNotification object:nil userInfo:@{kShowPage:kDashboardPage}];
     
 }

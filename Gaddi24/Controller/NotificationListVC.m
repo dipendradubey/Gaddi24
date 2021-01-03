@@ -64,7 +64,7 @@
     
     self.navigationController.navigationBar.translucent = NO;
     
-    self.navigationItem.title = [@"ITEM_NOTIFICATION" localizableString:@""];
+    self.navigationItem.title = [@"TV_NOTIFICATIONS" localizableString:@""];
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor],
        NSFontAttributeName:[UIFont fontWithName:@"Roboto-Regular" size:18.0f]}];
@@ -117,17 +117,17 @@
 //DKD added on 18 Apr 2020
 -(void)btnReadAllNotification{
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
-                                                                   message:@"Mark all notification as read"
+                                                                   message:[@"ALERT_MARK_ALL_READ" localizableString:@""]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:[@"ALERT_BUTTON_OK" localizableString:@""] style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
                                                              NSDictionary *requestDict = @{kApiRequest:@"User/AllNotificationRead"};
                                                             [self->connectionHandler makeConnectionWithRequest:requestDict];
                                                             [Util showLoader:@"" forView:self.view];
                                                               
                                                           }];
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:[@"ALERT_BUTTON_CANCEL" localizableString:@""] style:UIAlertActionStyleDefault
     handler:^(UIAlertAction * action) {
         [self dismissViewControllerAnimated:YES completion:nil];
         

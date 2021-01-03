@@ -18,7 +18,7 @@
 #import "NotificationListVC.h"
 #import "NSString+Localizer.h"
 #import "ContactsScan.h"
-
+#import "AppDelegate.h"
 @import Firebase;
 
 @interface VehicleListVC ()<UITableViewDataSource,UITableViewDelegate, ConnectionHandlerDelegate,UISearchBarDelegate>{
@@ -35,6 +35,7 @@
 
     short selectedButton; //1=All, 2=Active, 3=Idle, 4=Stop
     NSTimer *timer;
+    AppDelegate *appDelegate;
     
 }
 @property(nonatomic,weak)IBOutlet NSLayoutConstraint *dividerwidthConstraint;
@@ -58,6 +59,11 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    if(appDelegate.showBirdView){
+           appDelegate.showBirdView = false;
+           [self showAllVehicle];
+       }
     
     //DKD added on 18 Apr 2020
     [self callApiForNotificationCount];
@@ -103,6 +109,7 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 
 -(void)initialsetup{
     
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
     

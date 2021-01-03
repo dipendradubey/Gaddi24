@@ -211,7 +211,8 @@ static NSString * const COMMAND_EXPIRED = @"Expired";
             NSLog(@"%@",tempArray);
 
             dispatch_async(dispatch_get_main_queue(), ^{
-                if(tempArray){
+                if(tempArray != nil &&
+                                   [tempArray isKindOfClass:[NSArray class]] && tempArray.count > 0){
                     NSMutableArray *mutArray = [tempArray mutableCopy];
                     [mutArray insertObject:[NSNull null] atIndex:0]; //Adding this show the heaser
                     arrCommandList = mutArray;

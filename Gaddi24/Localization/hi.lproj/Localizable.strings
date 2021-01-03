@@ -1,10 +1,10 @@
 /*
  * Loco ios export: iOS Localizable.strings
- * Project: strings (5).xml conversion
+ * Project: strings (8).xml conversion
  * Release: Working copy
  * Locale: en, English
  * Exported by: Unregistered user
- * Exported at: Sat, 21 Nov 2020 19:36:02 +0530
+ * Exported at: Sat, 02 Jan 2021 20:04:27 +0530
  */
 
 /* Button */
@@ -63,9 +63,6 @@
 
 /*  */
 "ITEM_NOTIFICATION" = "अधिसूचना";
-
-"ITEM_HISTORY" = "प्लेबैक";
-"ITEM_ENGINE" = "इंजन";
 
 /*  */
 "ITEM_HOME" = "डैशबोर्ड";
@@ -277,6 +274,9 @@
 /*  */
 "HINT_TRIP_RATE_PER_KM" = "मूल्य प्रति किलोमीटर";
 
+/*  */
+"HINT_SEARCH_LOCATION" = "यहां स्थान दर्ज करें…";
+
 /* Error Messages */
 "CONNECTION_ERROR" = "इंटरनेट कनेक्शन के कारण आप ऑफ़लाइन हैं.";
 
@@ -351,6 +351,9 @@
 
 /*  */
 "ERROR_NO_VEHICLES_TRIP" = "यात्रा बनाने के लिए कोई वाहन उपलब्ध नहीं है";
+
+/*  */
+"ERROR_SEARCH_LOCATION" = "कृपया स्थान दर्ज करें";
 
 /* Textview */
 "TV_APP_VERSION" = "संस्करण %@";
@@ -516,3 +519,15 @@
 
 /*  */
 "ALERT_MARK_ALL_READ" = "सभी अधिसूचना को पढ़े अनुसार चिह्नित करें";
+
+/*  */
+"ALERT_PARKING_MODE_ACTIVATED" = "पार्किंग मोड सक्रिय किया गया";
+
+/*  */
+"ALERT_PARKING_MODE_DEACTIVATED" = "पार्किंग मोड निष्क्रिय किया गया";
+
+/*  */
+"ALERT_NO_LOCATION_FOUND" = "ऐसा कोई स्थान नहीं मिला";
+
+"ITEM_HISTORY" = "प्लेबैक";
+"ITEM_ENGINE" = "इंजन";

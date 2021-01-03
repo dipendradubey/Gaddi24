@@ -467,7 +467,7 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
 +(UIImage *)normalImage:(NSString *)imageName{
     UIImage *defaultImage = [UIImage imageNamed:[imageName lowercaseString]];
     if(defaultImage == nil)
-        defaultImage = [UIImage imageNamed:@"car"];
+        defaultImage = [UIImage imageNamed:@"truck"];
     return defaultImage;
 }
 
@@ -476,7 +476,7 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
                               [imageName lowercaseString]];
     UIImage *defaultImage = [UIImage imageNamed:mapImageName];
     if(defaultImage == nil)
-        defaultImage = [UIImage imageNamed:@"car_map"];
+        defaultImage = [UIImage imageNamed:@"truck_map"];
     return defaultImage;
 }
 

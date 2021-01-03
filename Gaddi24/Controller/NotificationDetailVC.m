@@ -10,6 +10,7 @@
 #import "Global.h"
 #import "ConnectionHandler.h"
 #import "VehicleListVC.h"
+#import "NSString+Localizer.h"
 //#import "NotificationListVC.m"
 
 @interface NotificationDetailVC ()<ConnectionHandlerDelegate>{
@@ -34,7 +35,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:39/255.0f green:41/255.0f blue:47/255.0f alpha:1];
     self.navigationController.navigationBar.translucent = NO;
     
-    self.navigationItem.title = @"Notifications";
+    self.navigationItem.title =     [@"TV_NOTIFICATIONS" localizableString:@""];
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor],
        NSFontAttributeName:[UIFont fontWithName:@"Roboto-Regular" size:18.0f]}];

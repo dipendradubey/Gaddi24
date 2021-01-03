@@ -254,7 +254,7 @@ static NSString * const kFontAwsomeName = @"kFontAwsomeName";
     }
     else if(collectionView.tag == 1003){
         size.width = (collectionView.frame.size.width - 20)/2;
-        size.height = 0.7*size.width;
+        size.height = 0.7*size.width - 10;
         NSLog(@"text=%@ & size =%@",lblWidthCalculator.text,NSStringFromCGSize(size));
     }
        

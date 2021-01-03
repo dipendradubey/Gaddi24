@@ -1,10 +1,10 @@
 /*
  * Loco ios export: iOS Localizable.strings
- * Project: strings (3).xml conversion
+ * Project: strings (6).xml conversion
  * Release: Working copy
  * Locale: en, English
  * Exported by: Unregistered user
- * Exported at: Sat, 21 Nov 2020 19:28:41 +0530
+ * Exported at: Sat, 02 Jan 2021 20:01:49 +0530
  */
 
 /* string name="MAP_API_KEY">AIzaSyBVrQC5_2xCY6tX8ibJmVZqKsNtjETyeZE</string
@@ -275,6 +275,9 @@ Button */
 /*  */
 "HINT_TRIP_CUST_EMAIL" = "Customer Email";
 
+/*  */
+"HINT_SEARCH_LOCATION" = "Enter location here…";
+
 /* Error Messages */
 "CONNECTION_ERROR" = "The internet connection appears to be offline.";
 
@@ -349,6 +352,9 @@ Button */
 
 /*  */
 "ERROR_NO_VEHICLES_TRIP" = "No vehicles available to create trip";
+
+/*  */
+"ERROR_SEARCH_LOCATION" = "Please enter location";
 
 /* Textview */
 "TV_APP_VERSION" = "Version %@";
@@ -514,6 +520,15 @@ Button */
 
 /*  */
 "ALERT_MARK_ALL_READ" = "Mark all notifications as read";
+
+/*  */
+"ALERT_PARKING_MODE_ACTIVATED" = "Parking mode activated";
+
+/*  */
+"ALERT_PARKING_MODE_DEACTIVATED" = "Parking mode Deactivated";
+
+/*  */
+"ALERT_NO_LOCATION_FOUND" = "No such location found";
 
 "ITEM_HISTORY" = "History";
 "ITEM_ENGINE" = "Engine";

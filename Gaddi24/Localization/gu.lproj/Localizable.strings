@@ -1,10 +1,10 @@
 /*
  * Loco ios export: iOS Localizable.strings
- * Project: strings (4).xml conversion
+ * Project: strings (7).xml conversion
  * Release: Working copy
  * Locale: en, English
  * Exported by: Unregistered user
- * Exported at: Sat, 21 Nov 2020 19:34:04 +0530
+ * Exported at: Sat, 02 Jan 2021 20:03:33 +0530
  */
 
 /* Button */
@@ -242,7 +242,7 @@
 "HINT_CONFIRM_PASSWORD" = "પાસવર્ડની પુષ્ટિ કરો";
 
 /*  */
-"HINT_SEARCH" = "tવાહન શોધો";
+"HINT_SEARCH" = "વાહન શોધો";
 
 /*  */
 "HINT_TRIP_NAME" = "સફરનું નામ";
@@ -273,6 +273,9 @@
 
 /*  */
 "HINT_TRIP_RATE_PER_KM" = "કિલોમીટર દીઠ ભાવ";
+
+/*  */
+"HINT_SEARCH_LOCATION" = "અહીં સ્થાન દાખલ કરો…";
 
 /* Error Messages */
 "CONNECTION_ERROR" = "ઇન્ટરનેટ કનેક્શન ઑફલાઇન લાગે છે.";
@@ -348,6 +351,9 @@
 
 /*  */
 "ERROR_NO_VEHICLES_TRIP" = "સફર બનાવવા માટે કોઈ વાહનો ઉપલબ્ધ નથી";
+
+/*  */
+"ERROR_SEARCH_LOCATION" = "કૃપા કરી સ્થાન દાખલ કરો";
 
 /* Textview */
 "TV_APP_VERSION" = "સંસ્કરણ %@";
@@ -513,6 +519,15 @@
 
 /*  */
 "ALERT_MARK_ALL_READ" = "બધી સૂચનાઓ વાંચેલી તરીકે ચિહ્નિત કરો";
+
+/*  */
+"ALERT_PARKING_MODE_ACTIVATED" = "પાર્કિંગ મોડ સક્રિય થયો";
+
+/*  */
+"ALERT_PARKING_MODE_DEACTIVATED" = "પાર્કિંગ મોડ નિષ્ક્રિય થયો";
+
+/*  */
+"ALERT_NO_LOCATION_FOUND" = "આવું કોઈ સ્થાન મળ્યું નથી";
 
 "ITEM_HISTORY" = "પ્લેબેક";
 "ITEM_ENGINE" = "એંજિન";

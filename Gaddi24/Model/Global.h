@@ -68,6 +68,8 @@ static NSString * const kNotification = @"kNotification";
 
 static NSString * const kDashboardPage = @"Dashboard";
 
+static NSString * const kBirdViewPage = @"Birdview";
+
 static NSString * const kNotificationPage = @"NotificationListVC";
 
 static NSString * const kUpdateNotificationDetail = @"kUpdateNotificationDetail";

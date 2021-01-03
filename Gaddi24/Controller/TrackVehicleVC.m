@@ -195,7 +195,7 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     self.navigationItem.rightBarButtonItem=rightbarButton;
     
     
-    markerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    markerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
     markerImgView.image = [Util mapImage:self.selectedVehicleDict[@"VehicleType"]];
     markerImgView.contentMode = UIViewContentModeScaleAspectFit;
     

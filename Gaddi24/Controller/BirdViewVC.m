@@ -134,7 +134,7 @@ static NSString * const kGeoAddress = @"kGeoAddress";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:39/255.0f green:41/255.0f blue:47/255.0f alpha:1];
     self.navigationController.navigationBar.translucent = NO;
     
-    self.navigationItem.title = [@"ITEM_BIRDVIEW" localizableString:@""];
+    self.navigationItem.title = [@"RB_BIRDVIEW" localizableString:@""];
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor],
        NSFontAttributeName:[UIFont fontWithName:@"Roboto-Regular" size:18.0f]}];
@@ -284,7 +284,7 @@ static NSString * const kGeoAddress = @"kGeoAddress";
 #pragma mark Button action handling
 
 -(IBAction)btnMapClicked:(id)sender{
-    [popoverVC updateTableContent:@[@"Normal",@"Satellite",@"Terrain"] withSelectedTitle:selectedMapType];
+    [popoverVC updateTableContent:@[[@"ITEM_NORMAL" localizableString:@""],[@"ITEM_SATELLITE" localizableString:@""],[@"ITEM_TERRAIN" localizableString:@""]] withSelectedTitle:selectedMapType];
     nav.modalPresentationStyle = UIModalPresentationPopover;
     
     UIPopoverPresentationController *popover = nav.popoverPresentationController;
@@ -471,13 +471,13 @@ static NSString * const kGeoAddress = @"kGeoAddress";
 -(void)popoverSelected:(NSString *)title{
     
     selectedMapType = title; //[popoverVC updateTableContent:@[@"Normal",@"Satellite",@"Terrain"] withSelectedTitle:selectedMapType];
-    if ([selectedMapType isEqualToString:@"Normal"]) {
+    if ([selectedMapType isEqualToString:[@"ITEM_NORMAL" localizableString:@""]]) {
         self.mapView.mapType = kGMSTypeNormal;
     }
-    else if ([selectedMapType isEqualToString:@"Satellite"]) {
+    else if ([selectedMapType isEqualToString:[@"ITEM_SATELLITE" localizableString:@""]]) {
         self.mapView.mapType = kGMSTypeSatellite;
     }
-    else if ([selectedMapType isEqualToString:@"Terrain"]) {
+    else if ([selectedMapType isEqualToString:[@"ITEM_TERRAIN" localizableString:@""]]) {
         self.mapView.mapType = kGMSTypeTerrain;
     }
     

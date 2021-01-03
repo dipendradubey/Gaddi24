@@ -222,7 +222,7 @@ static const NSInteger SZTEXTVIEW_TAG = 1000;
         //NSString *encodedUrlStr = [apiRequest1 urlencode];
 
         
-        NSString *postData = [NSString stringWithFormat:@"\"%@\"",textViewText];
+        NSDictionary *postData = @{@"Data":textViewText};
         
         NSDictionary *requestDict = @{kApiRequest:apiRequest,kPostData:postData};
         [connectionHandler makeConnectionWithRequestForContact:requestDict];

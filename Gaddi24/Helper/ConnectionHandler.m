@@ -124,17 +124,14 @@
 
 -(void)makeConnectionWithRequestForContact:(NSDictionary *)requestDict{
     
-    NSString *urlString = [NSString stringWithFormat:@"%@%@",ApiPath,requestDict[kApiRequest]];
-    ////NSLog(@"urlString =%@",urlString);
-    
-    //NSLog(@"requestDict =%@",requestDict);
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",ApiPath_V2,requestDict[kApiRequest]];
     
     NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 
     
-    NSData *data = [requestDict[kPostData] dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:requestDict[kPostData] options:kNilOptions error:nil];
     
     [request setHTTPBody:data];
     
