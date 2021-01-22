@@ -425,6 +425,7 @@
 				A8EFC0F62443284100A0A86F /* Frameworks */,
 				A8EFC0F72443284100A0A86F /* Resources */,
 				1F3675D9AE4641251A217E3F /* [CP] Copy Pods Resources */,
+				A880EB3D25BB696C009E3B94 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -539,6 +540,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A880EB3D25BB696C009E3B94 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -736,6 +756,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gaddi24/Gaddi24.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = YVSNH75XYA;
 				INFOPLIST_FILE = Gaddi24/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -759,6 +780,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gaddi24/Gaddi24.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = YVSNH75XYA;
 				INFOPLIST_FILE = Gaddi24/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

@@ -204,6 +204,8 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     connectionHandler = [[ConnectionHandler alloc]init];
     connectionHandler.connectionHandlerDelegate = self;
 
+    points = [[NSMutableArray alloc]initWithCapacity:10];
+
     
     [Util showLoader:@"" forView:self.view];
     [self performSelector:@selector(fetchLatestVehicleData) withObject:nil afterDelay:0.1];
@@ -245,7 +247,9 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     [self.btnHide setTitle:[@"BTN_HIDE" localizableString:@""] forState:UIControlStateNormal];
 
     
-    points = [[NSMutableArray alloc]initWithCapacity:10]; //This will hold all the oordinate
+    
+    
+    //This will hold all the oordinate
     markersMutArray = [[NSMutableArray alloc]initWithCapacity:10];
     
     camera = [GMSCameraPosition cameraWithLatitude:[self.selectedVehicleDict[@"Latitude"] doubleValue]
@@ -350,78 +354,6 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     });
 }
 
--(void)processRespose__09Feb2020{
-    
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    
-    
-    //This will clear all existing marker
-    //DKD commneted on 09 Feb 2020
-    
-    /*
-    for (GMSMarker *marker in markersMutArray) {
-        marker.map = nil;
-    }
-     */
-    
-    CGFloat currentZoom = self.mapView.camera.zoom;
-    
-    camera = [GMSCameraPosition cameraWithLatitude:[self.vehicleDataDict[@"Latitude"] doubleValue]
-                                         longitude:[self.vehicleDataDict[@"Longitude"] doubleValue]
-                                              zoom:currentZoom];
-    self.mapView.camera = camera;
-    
-    GMSMarker  *marker = [[GMSMarker alloc] init];
-    
-    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([self.vehicleDataDict[@"Latitude"] doubleValue], [self.vehicleDataDict[@"Longitude"] doubleValue]);
-    
-    marker.position = coordinate;
-    
-    marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
-    
-    [points addObject:[NSValue valueWithMKCoordinate:coordinate]];
-    
-    marker.icon = [UIImage imageNamed:@"unreachable_car.png"];
-    
-    //Active
-    if ([self.vehicleDataDict[@"VehicleState"] intValue]==1) {
-        marker.icon = [UIImage imageNamed:@"active_car.png"];
-    }
-    //Idle
-    else if ([self.vehicleDataDict[@"VehicleState"] intValue]==2){
-        marker.icon = [UIImage imageNamed:@"idel_car.png"];
-    }
-    else if ([self.vehicleDataDict[@"VehicleState"] intValue]==3){
-        marker.icon = [UIImage imageNamed:@"stop_car.png"];
-    }
-    
-    
-    
-    marker.map = self.mapView;
-
-    [markersMutArray addObject:marker];
-    
-    self.mapView.hidden = NO;
-    self.buttonTraffic.hidden = self.mapView.hidden;
-    self.buttonMap.hidden = self.mapView.hidden;
-    self.buttonDirection.hidden = self.mapView.hidden;
-    
-    [self drawLineBetweenLocation]; //Draw line between location
-    //DKD added this on 07 July 2019
-    [self getGeoAddress: [self.vehicleDataDict[@"LoadFromGoogle"] intValue]?YES:NO];
-    
-    //I will update collection view when trackview container is visible
-    
-    if (self.trackViewContainer.hidden == NO) {
-        [self.collectionView2 reloadData];
-    }
-    self.lblTime.text = [Util updateDateFormate:self.vehicleDataDict[@"DateTimeOfLog"]] ;
-    
-    [self.collectionView2 reloadData];
-
-}
-
 -(void)processRespose{
     
     // Create a GMSCameraPosition that tells the map to display the
@@ -447,6 +379,8 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([self.vehicleDataDict[@"Latitude"] doubleValue], [self.vehicleDataDict[@"Longitude"] doubleValue]);
     
+    NSLog(@"===latitude =%lf And Longitude =%lf",[self.vehicleDataDict[@"Latitude"] doubleValue],[self.vehicleDataDict[@"Longitude"] doubleValue]);
+    
     [self.mapView animateToCameraPosition:camera];
     
     if (!marker){
@@ -469,7 +403,10 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
            [CATransaction commit];
        }
     
-    [points addObject:[NSValue valueWithMKCoordinate:coordinate]];
+    if(points == nil)
+        points = [[NSMutableArray alloc] init];
+    
+    [points addObject:[self.vehicleDataDict mutableCopy]];
     
     [markersMutArray addObject:marker];
     
@@ -518,9 +455,20 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
      */
     //Here we have more than 1 coordinate hence draw line between them
     if ([points count]>1) {
-        CLLocationCoordinate2D coordinate1 = [[points objectAtIndex:[points count]-2] MKCoordinateValue]; //Second last element in array
-        CLLocationCoordinate2D coordinate2 = [[points objectAtIndex:[points count]-1] MKCoordinateValue];//last element in array
         
+        NSDictionary *vehicleData1 = [points objectAtIndex:[points count]-2];
+        NSDictionary *vehicleData2 = [points objectAtIndex:[points count]-1];
+
+        
+        CLLocationCoordinate2D coordinate1 = CLLocationCoordinate2DMake([vehicleData1[@"Latitude"] doubleValue],
+                                        [vehicleData1[@"Longitude"] doubleValue]);
+        
+        CLLocationCoordinate2D coordinate2 = CLLocationCoordinate2DMake([vehicleData2[@"Latitude"] doubleValue],
+                                        [vehicleData2[@"Longitude"] doubleValue]);
+        
+        /*CLLocationCoordinate2D coordinate1 = [[points objectAtIndex:[points count]-2] MKCoordinateValue]; //Second last element in array
+        CLLocationCoordinate2D coordinate2 = [[points objectAtIndex:[points count]-1] MKCoordinateValue];//last element in array
+        */
         GMSMutablePath *path = [GMSMutablePath path];
         [path addCoordinate:coordinate1];
         [path addCoordinate:coordinate2];

@@ -6,8 +6,8 @@ target 'Gaddi24' do
   # use_frameworks!
 
   # Pods for Gaddi24
-  pod 'Fabric', '~> 1.8.2'
-  pod 'Crashlytics', '~> 3.11.1'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'GoogleMaps'
@@ -17,5 +17,6 @@ target 'Gaddi24' do
   pod 'MMDrawerController', '~> 0.5.7'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'IQKeyboardManager'
+  pod 'LMGeocoder'
 
 end

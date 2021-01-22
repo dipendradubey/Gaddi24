@@ -20,6 +20,8 @@
 
 @property (nonatomic,weak)IBOutlet UIButton *buttonTemp;
 
+@property (nonatomic,weak)IBOutlet UIButton *buttonSearch;
+
 
 @end
 

@@ -22,6 +22,7 @@
 #import "PopoverVC.h"
 #import "UIViewController+MMDrawerController.h"
 #import "NSString+Localizer.h"
+#import "LMGeocoder.h"
 
 
 #define IDIOM    UI_USER_INTERFACE_IDIOM()
@@ -66,7 +67,9 @@
  which marker was most recently tapped, so I'm using this to store that most
  recently tapped marker */
 @property (strong, nonatomic) GMSMarker *currentlyTappedMarker;
-
+@property(nonatomic,weak)IBOutlet UIView *viewTransparent;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
+@property (weak, nonatomic) IBOutlet UITextField *txtFielldSearch;
 @end
 
 static NSString * const kTitleName = @"kTitleName";
@@ -148,6 +151,20 @@ static NSString * const kGeoAddress = @"kGeoAddress";
     [leftbarButton setCustomView:leftButton];
     self.navigationItem.leftBarButtonItem=leftbarButton;
     
+    UIButton *rightButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightButton1.frame = CGRectMake(0, 0, 40, 40);
+    [rightButton1 setTitle:@"\uf002" forState:UIControlStateNormal];
+    rightButton1.titleLabel.font = [UIFont fontWithName:@"FontAwesome" size:25.0f];
+    rightButton1.titleLabel.textColor = [UIColor whiteColor];
+    
+    [rightButton1 addTarget:self action:@selector(showSearchOption) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIBarButtonItem *rightbarButton=[[UIBarButtonItem alloc] init];
+    [rightbarButton setCustomView:rightButton1];
+    self.navigationItem.rightBarButtonItem=rightbarButton;
+    
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Second" bundle:nil];
     popoverVC = [storyboard instantiateViewControllerWithIdentifier:@"PopoverVC"];
     popoverVC.popoverVCDelegate = self;
@@ -176,7 +193,59 @@ static NSString * const kGeoAddress = @"kGeoAddress";
                                               zoom:15];
     self.mapView.camera = camera;
 
+    self.txtFielldSearch.attributedPlaceholder = [[NSAttributedString alloc] initWithString:[@"HINT_SEARCH_LOCATION" localizableString:@""] attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
+    self.txtFielldSearch.textAlignment = NSTextAlignmentLeft;
+    self.txtFielldSearch.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    self.txtFielldSearch.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0);
     
+    [self.searchView updateStyleWithInfo:@{kCornerRadius:@5.0f, kBorderWidth:@1.0f,kBorderColor:self.searchView.backgroundColor}];
+    [self.txtFielldSearch updateStyleWithInfo:@{kCornerRadius:@5.0f, kBorderWidth:@1.0f,kBorderColor:[UIColor colorWithRed:125/255.0f green:126/255.0f blue:128/255.0f alpha:1]}];
+    
+    [self.buttonSearch setTitle:[@"Search" localizableString:@""] forState:UIControlStateNormal];
+    
+    
+}
+
+-(void)showSearchOption{
+    self.txtFielldSearch.text = @"";
+    [self.txtFielldSearch becomeFirstResponder];
+    [self showHideSearchView:NO];
+}
+
+-(void)showHideSearchView:(BOOL)flag{
+    self.viewTransparent.hidden = flag;
+    self.searchView.hidden = flag;
+    [self.view endEditing:true];
+}
+
+- (IBAction)btnSearchClicked:(id)sender {
+    
+    if(self.txtFielldSearch.text.length == 0){
+        [Util showAlert:@"" andMessage:[@"HINT_SEARCH_LOCATION" localizableString:@""] forViewController:self];
+        return;
+    }
+    
+    if (self.txtFielldSearch.text.length>0) {
+        [self showHideSearchView:true];
+        [[LMGeocoder sharedInstance] geocodeAddressString:self.txtFielldSearch.text
+                                                  service:LMGeocoderServiceGoogle
+                                       alternativeService:LMGeocoderServiceApple
+                                        completionHandler:^(NSArray *results, NSError *error) {
+                                            if (results.count && !error) {
+                                                LMAddress *address = [results firstObject];
+                                                NSLog(@"Coordinate: (%f, %f)", address.coordinate.latitude, address.coordinate.longitude);
+                                                
+                                                CGFloat currentZoom = 10;
+                                                
+                                                GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:address.coordinate.latitude
+                                                                                                        longitude:address.coordinate.longitude
+                                                                                                             zoom:currentZoom];
+                                                [self.mapView animateToCameraPosition:camera];
+                                                
+                                            }
+                                        }];
+    }
+
 }
 
 -(void)fetchAllVehicleData{
@@ -490,6 +559,13 @@ static NSString * const kGeoAddress = @"kGeoAddress";
     return UIModalPresentationNone;
 }
 
-
+#pragma mark Textfield delegate method
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.txtFielldSearch resignFirstResponder];
+    [self btnSearchClicked:nil];
+    
+    return true;
+}
 
 @end

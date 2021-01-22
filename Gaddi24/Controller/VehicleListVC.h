@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Crashlytics/Crashlytics.h>
 #import "MarqueeLabel.h"
 
 

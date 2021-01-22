@@ -11,11 +11,11 @@
         <array key="FontAwesome.otf">
             <string>FontAwesome</string>
         </array>
-        <array key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
-        </array>
-        <array key="Roboto-Regular.ttf">
+        <array key="Roboto.ttf">
             <string>Roboto-Regular</string>
+        </array>
+        <array key="Roboto_Bold.ttf">
+            <string>Roboto-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -951,7 +951,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reseller Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lco-xK-xav" userLabel="Lbl2">
-                                                    <rect key="frame" x="80" y="30" width="130" height="29"/>
+                                                    <rect key="frame" x="80" y="30" width="127.5" height="29"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="23"/>
                                                     <nil key="highlightedColor"/>
@@ -1297,7 +1297,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="3002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC6-yv-Sc0">
-                                                    <rect key="frame" x="183" y="61.5" width="72" height="30"/>
+                                                    <rect key="frame" x="184" y="61.5" width="71" height="30"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="UvJ-Wv-KBP"/>
