@@ -25,6 +25,7 @@
 #import "TrackVehicleVC.h"
 #import "SummaryVC.h"
 #import "NSString+Localizer.h"
+#import "MarkerView.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -331,8 +332,63 @@ static const CGFloat VERY_FAST = 0.05;
     self.lblSpeed.text = @"";
     self.lblDate.text = @"";
     
+    [self showInitialMarker];
+    
     //[self moveVehicle];
     
+}
+
+-(void)showInitialMarker{
+    [self showDefaultMarker:@"start_location"];
+    [self showDefaultMarker:@"end_location"];
+}
+
+-(void)showDefaultMarker:(NSString *)markerType{
+
+    NSDictionary *pointDict = [routeArray firstObject];
+    UIColor *color = [UIColor colorWithRed:26/255.0f green:170/255.0f blue:29/255.0f alpha:1];
+
+    if ([markerType isEqualToString:@"end_location"]) {
+        pointDict = [routeArray lastObject];
+        color = [UIColor redColor];
+    }
+
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([pointDict[@"Latitude"] doubleValue], [pointDict[@"Longitude"] doubleValue]);
+
+
+    //We will show marker fontawsome for start & end only & for oter will show image
+    if ([markerType isEqualToString:@"end_location"] ||[markerType isEqualToString:@"start_location"]){
+
+        GMSMarker  *marker = [[GMSMarker alloc] init];
+        marker.position = coordinate;
+
+        MarkerView *markerView = [[[NSBundle mainBundle] loadNibNamed:@"PlayBackMarker" owner:self options:nil] objectAtIndex:0];
+
+        markerView.lbl1.text = @"START";
+        if([markerType isEqualToString:@"end_location"])
+            markerView.lbl1.text = @"STOP";
+
+        marker.iconView = markerView;
+        marker.map = self.mapView;
+
+        //All marker are loaded hence make all visible as per birdview
+        if ([markerType isEqualToString:@"end_location"]){
+            [self updateCameraPosition];
+        }
+    }
+
+}
+
+-(void)updateCameraPosition{
+    GMSMutablePath *path = [GMSMutablePath path];
+
+    for (NSDictionary *pointDict in routeArray) {
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([pointDict[@"Latitude"] doubleValue], [pointDict[@"Longitude"] doubleValue]);
+        [path addCoordinate:coordinate];
+        //[path addCoordinate: marker.position];
+    }
+    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithPath:path];
+    [self.mapView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:bounds]];
 }
 
 -(void)drawLineBetweenLocation{
@@ -411,7 +467,8 @@ static const CGFloat VERY_FAST = 0.05;
     if (!marker) {
         marker = [[GMSMarker alloc] init];
         marker.position = coordinate;
-       UIImageView *markerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        UIImageView *markerImgView = [[UIImageView alloc] initWithFrame:[Util FetchVehicleFrame:self.selectedVehicleDict[@"VehicleType"]]];
+
         markerImgView.image = [Util mapImage:self.selectedVehicleDict[@"VehicleType"]];
         markerImgView.contentMode = UIViewContentModeScaleAspectFit;
         markerImgView.tintColor = [UIColor colorWithRed:39/255.0f green:41/255.0f blue:47/255.0f alpha:1];

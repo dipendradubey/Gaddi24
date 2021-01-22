@@ -10,6 +10,7 @@
 		757DB479588B59C5DAF77CDE /* libPods-Gaddi24.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C9F14B40E9FBD7ABB0CC24 /* libPods-Gaddi24.a */; };
 		A801D6BD24B7873E00B3A777 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A801D6BC24B7873E00B3A777 /* WebVC.m */; };
 		A815C8442519BC6B00C9042F /* ContactsScan.m in Sources */ = {isa = PBXBuildFile; fileRef = A815C8432519BC6B00C9042F /* ContactsScan.m */; };
+		A8250CDD25BA624C008F322D /* PlayBackMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8250CDC25BA624C008F322D /* PlayBackMarker.xib */; };
 		A82C917A244329E500BB4074 /* MarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82C9177244329E500BB4074 /* MarkerWindow.xib */; };
 		A82C917B244329E500BB4074 /* VehicleSmallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82C9178244329E500BB4074 /* VehicleSmallView.xib */; };
 		A82C917C244329E500BB4074 /* MarkerWindow1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82C9179244329E500BB4074 /* MarkerWindow1.xib */; };
@@ -75,6 +76,7 @@
 		A801D6BF24B7994E00B3A777 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A815C8422519BC6B00C9042F /* ContactsScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsScan.h; sourceTree = "<group>"; };
 		A815C8432519BC6B00C9042F /* ContactsScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsScan.m; sourceTree = "<group>"; };
+		A8250CDC25BA624C008F322D /* PlayBackMarker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayBackMarker.xib; sourceTree = "<group>"; };
 		A82C9177244329E500BB4074 /* MarkerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerWindow.xib; sourceTree = "<group>"; };
 		A82C9178244329E500BB4074 /* VehicleSmallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleSmallView.xib; sourceTree = "<group>"; };
 		A82C9179244329E500BB4074 /* MarkerWindow1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerWindow1.xib; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		A82C9176244329E500BB4074 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				A8250CDC25BA624C008F322D /* PlayBackMarker.xib */,
 				A82C9177244329E500BB4074 /* MarkerWindow.xib */,
 				A82C9178244329E500BB4074 /* VehicleSmallView.xib */,
 				A82C9179244329E500BB4074 /* MarkerWindow1.xib */,
@@ -476,6 +479,7 @@
 				A8334E052443383A007B300F /* Roboto.ttf in Resources */,
 				A8EFC1092443284400A0A86F /* LaunchScreen.storyboard in Resources */,
 				A82C917C244329E500BB4074 /* MarkerWindow1.xib in Resources */,
+				A8250CDD25BA624C008F322D /* PlayBackMarker.xib in Resources */,
 				A82C917B244329E500BB4074 /* VehicleSmallView.xib in Resources */,
 				A8334E012443383A007B300F /* Calibre-Regular.ttf in Resources */,
 				A82C91DE244329F700BB4074 /* Fourth.storyboard in Resources */,

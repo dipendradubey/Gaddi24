@@ -40,6 +40,8 @@
 +(UIImage *)normalImage:(NSString *)imageName;
 +(UIImage *)mapImage:(NSString *)imageName;
 +(UIColor *)vehicleColor:(NSDictionary *)dict;
-
++(CGRect)FetchVehicleFrame:(NSString *)imageName;
++(CGRect)FetchVehicleFrameOnTracking:(NSString *)imageName;
++(void)shareLatLong:(NSDictionary *)vehicleDataDict forViewController:(UIViewController *)VC forButton:(UIButton *)btn;
 
 @end

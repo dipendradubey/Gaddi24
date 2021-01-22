@@ -61,7 +61,8 @@ static NSString * const kPassword = @"password";
             [Util updateDefaultForKey:kLoginResponse toValue:responseDict[kResponse]];
             [self showVehicleListing];
             [self fetchAndUploadGCMToken];
-            
+            [Util updateDefaultForKey:kLoginDate toValue:[NSDate date]];
+
             
             
         }

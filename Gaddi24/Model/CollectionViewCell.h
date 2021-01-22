@@ -15,5 +15,7 @@
 @property(nonatomic,weak)IBOutlet UILabel *lbl3;
 @property(nonatomic,weak)IBOutlet UIView *view1;
 @property(nonatomic,weak)IBOutlet UIImageView *imageView1;
+@property(nonatomic,weak)IBOutlet UIImageView *imageView2;
+
 
 @end

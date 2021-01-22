@@ -65,6 +65,10 @@ static const NSInteger NOTIFICATION_TAG = 1021;
            [self showAllVehicle];
        }
     
+    if([Util retrieveDefaultForKey:kLoginDate] == NULL){
+        return;
+    }
+    
     //DKD added on 18 Apr 2020
     [self callApiForNotificationCount];
     [self callApiForMarqueeString];
@@ -72,6 +76,11 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    
+    if([Util retrieveDefaultForKey:kLoginDate] == NULL){
+        [[NSNotificationCenter defaultCenter]postNotificationName:kLogoutNotification object:nil userInfo:nil];
+        return;
+    }
     
     [Util showLoader:@"" forView:self.view];
     
@@ -192,7 +201,68 @@ static const NSInteger NOTIFICATION_TAG = 1021;
     self.searchBar.placeholder = [@"HINT_SEARCH" localizableString:@""];
 
     [contactsScan retriveContactList];
+    [self buttonSetUp];
     
+}
+
+-(void)buttonSetUp{
+    [self.btnAll setTitle:[NSString stringWithFormat:[@"TAB_ALL" localizableString:@""],(unsigned long)[allVehicleArray count]] forState:UIControlStateNormal];
+    
+    [self.btnActive setTitle:[NSString stringWithFormat:[@"TAB_ACTIVE" localizableString:@""],(unsigned long)[activeVehicleArray count]] forState:UIControlStateNormal];
+    
+    [self.btnIdle setTitle:[NSString stringWithFormat:[@"TAB_IDLE" localizableString:@""],(unsigned long)[idleVehicleArray count]] forState:UIControlStateNormal];
+    
+    [self.btnStop setTitle:[NSString stringWithFormat:[@"TAB_STOP" localizableString:@""],(unsigned long)[stopVehicleArray count]] forState:UIControlStateNormal];
+    
+    [self.btnUnavailable setTitle:[NSString stringWithFormat:[@"TAB_UNREACHABLE" localizableString:@""],(unsigned long)[unavailableVehicleArray count]] forState:UIControlStateNormal];
+    
+     [self.btnInActive setTitle:[NSString stringWithFormat:[@"TAB_INACTIVE" localizableString:@""],(unsigned long)[inActiveArray count]] forState:UIControlStateNormal];
+    
+    [self.btnAll sizeToFit];
+    [self.btnActive sizeToFit];
+    [self.btnIdle sizeToFit];
+    [self.btnStop sizeToFit];
+    [self.btnUnavailable sizeToFit];
+    [self.btnInActive sizeToFit];
+    
+    CGFloat stackViewWidth = _btnAll.frame.size.width + _btnActive.frame.size.width + _btnIdle.frame.size.width + _btnStop.frame.size.width + _btnUnavailable.frame.size.width + _btnInActive.frame.size.width;
+    
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    
+    if(screenWidth > stackViewWidth){
+        _stackViewWidth.constant = screenWidth;
+    }
+    else{
+        _stackViewWidth.constant = stackViewWidth;
+    }
+    
+    if (selectedButton == 1) {
+        [self btnVehicleStateClicked:self.btnAll];
+    }
+    else if (selectedButton == 2){
+        [self btnVehicleStateClicked:self.btnActive];
+    }
+    else if (selectedButton == 3){
+        [self btnVehicleStateClicked:self.btnIdle];
+    }
+    else if (selectedButton == 4){
+        [self btnVehicleStateClicked:self.btnStop];
+    }
+    else if (selectedButton == 5){
+        [self btnVehicleStateClicked:self.btnUnavailable];
+    }
+    else if (selectedButton == 6){
+        [self btnVehicleStateClicked:self.btnInActive];
+    }
+    
+    /*
+    [self.btnAll setBackgroundColor:[UIColor greenColor]];
+    [self.btnActive setBackgroundColor:[UIColor redColor]];
+    [self.btnIdle setBackgroundColor:[UIColor yellowColor]];
+    [self.btnStop setBackgroundColor:[UIColor purpleColor]];
+    [self.btnUnavailable setBackgroundColor:[UIColor greenColor]];
+    [self.btnInActive setBackgroundColor:[UIColor redColor]];
+     */
 }
 
 #pragma mark -
@@ -219,7 +289,7 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 }
 
 -(void)showErrorMessage:(NSString *)errorMsg{
-  [Util showAlert:@"" andMessage:errorMsg forViewController:self];
+  //[Util showAlert:@"" andMessage:errorMsg forViewController:self];
 }
 
 
@@ -258,22 +328,35 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 
 //DKD added on 21 June 2020
 -(void)callApiForMarqueeString{
-    //NSDictionary *loginResponse = [Util retrieveDefaultForKey:kLoginResponse][0];
-    //http://www.trackgaddi.com/api/v1/user/rightsandlinks
-    NSString *api = [NSString stringWithFormat:@"%@user/rightsandlinks",ApiPath];
     
-    [connectionHandler makeGetRequest:api withResponse:^(NSData *data, NSError *error) {
+    NSString *loginTime = [Util fromDateToStringConverter:@{kActualDateFormate:SHARE_REQUIRED_DATE,kDate:[Util retrieveDefaultForKey:kLoginDate]}];
+    NSString *marqeeLink = [NSString stringWithFormat:@"%@user/rightsandlinks?lastLoginTime=%@",ApiPath,loginTime];
+    NSString *encodedLink = [marqeeLink stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    //NSString *api = [NSString stringWithFormat:@"%@user/rightsandlinks",ApiPath];
+    
+    [connectionHandler makeGetRequest:encodedLink withResponse:^(NSData *data, NSError *error) {
         if (error == nil && data!= nil) {
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
             NSLog(@"%@",dict);
 
             dispatch_async(dispatch_get_main_queue(), ^{
-               if(dict)
-                   [Util updateDefaultForKey:kMarqueeResult toValue:dict];
-                    NSArray *arrMsgUser = dict[@"MessagesToUser"];
-                    NSString *marqueeText = [arrMsgUser componentsJoinedByString:@"\t\t\t\t\t"];
-                    marqueeText = [NSString stringWithFormat:@"\t\t\t\t\t%@",marqueeText];
-                    self.lblMarqee.text = marqueeText;
+                if(dict != NULL){
+                    if([dict [@"IsPasswordChange"] boolValue]){
+                        [[NSNotificationCenter defaultCenter]postNotificationName:kLogoutNotification object:nil userInfo:nil];
+                        return;
+                    }
+                    [Util updateDefaultForKey:kMarqueeResult toValue:dict];
+                    
+                    //NSLog(@"Do nothing");
+                    [[NSNotificationCenter defaultCenter]postNotificationName:RELOAD_MENUPAGE object:nil userInfo:@{kShowPage:kDashboardPage}];
+
+                     NSArray *arrMsgUser = dict[@"MessagesToUser"];
+                     NSString *marqueeText = [arrMsgUser componentsJoinedByString:@"\t\t\t\t\t"];
+                     marqueeText = [NSString stringWithFormat:@"\t\t\t\t\t%@",marqueeText];
+                     self.lblMarqee.text = marqueeText;
+                }
+                   
             });
         }
     }];
@@ -320,67 +403,44 @@ static const NSInteger NOTIFICATION_TAG = 1021;
     
     unavailableVehicleArray = [allVehicleArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"VehicleStateName == %@ AND IsExpired == %d",@"Unreachable", 0]];
     
-    //self.lblCommandTime.text = [NSString stringWithFormat:[@"TV_COMMAND_COUNTDOWN" localizableString:@""],(int)(30-secs)];
-    
-    [self.btnAll setTitle:[NSString stringWithFormat:[@"TAB_ALL" localizableString:@""],(unsigned long)[allVehicleArray count]] forState:UIControlStateNormal];
-    
-    [self.btnActive setTitle:[NSString stringWithFormat:[@"TAB_ACTIVE" localizableString:@""],(unsigned long)[activeVehicleArray count]] forState:UIControlStateNormal];
-    
-    [self.btnIdle setTitle:[NSString stringWithFormat:[@"TAB_IDLE" localizableString:@""],(unsigned long)[idleVehicleArray count]] forState:UIControlStateNormal];
-    
-    [self.btnStop setTitle:[NSString stringWithFormat:[@"TAB_STOP" localizableString:@""],(unsigned long)[stopVehicleArray count]] forState:UIControlStateNormal];
-    
-    [self.btnUnavailable setTitle:[NSString stringWithFormat:[@"TAB_UNREACHABLE" localizableString:@""],(unsigned long)[unavailableVehicleArray count]] forState:UIControlStateNormal];
-    
-     [self.btnInActive setTitle:[NSString stringWithFormat:[@"TAB_INACTIVE" localizableString:@""],(unsigned long)[inActiveArray count]] forState:UIControlStateNormal];
-    
-    [self.btnAll sizeToFit];
-    [self.btnActive sizeToFit];
-    [self.btnIdle sizeToFit];
-    [self.btnStop sizeToFit];
-    [self.btnUnavailable sizeToFit];
-    [self.btnInActive sizeToFit];
-    
-    
-//    for (int btnTag = 1; btnTag<=6; btnTag++) {
-//        [self updateButtonWidth:[self.view viewWithTag:btnTag]];
-//    }
-    
-    
-    CGFloat stackViewWidth = _btnAll.frame.size.width + _btnActive.frame.size.width + _btnIdle.frame.size.width + _btnStop.frame.size.width + _btnUnavailable.frame.size.width + _btnInActive.frame.size.width;
-      _stackViewWidth.constant = stackViewWidth;
-    
-    
-    if (selectedButton == 1) {
-        [self btnVehicleStateClicked:self.btnAll];
-    }
-    else if (selectedButton == 2){
-        [self btnVehicleStateClicked:self.btnActive];
-    }
-    else if (selectedButton == 3){
-        [self btnVehicleStateClicked:self.btnIdle];
-    }
-    else if (selectedButton == 4){
-        [self btnVehicleStateClicked:self.btnStop];
-    }
-    else if (selectedButton == 5){
-        [self btnVehicleStateClicked:self.btnUnavailable];
-    }
-    else if (selectedButton == 6){
-        [self btnVehicleStateClicked:self.btnInActive];
-    }
+    [self buttonSetUp];
+    [self filterTheVehicleListAsPerSearch:self.searchBar.text];
 
-  
-    
-//    _btnAll.backgroundColor = [UIColor redColor];
-//    _btnActive.backgroundColor = [UIColor yellowColor];
-//    _btnIdle.backgroundColor = [UIColor cyanColor];
-//    _btnStop.backgroundColor = [UIColor blackColor];
-//    _btnUnavailable.backgroundColor = [UIColor orangeColor];
-//    _btnInActive.backgroundColor = [UIColor blueColor];
-    
     
 }
+
+-(void)filterTheVehicleListAsPerSearch:(NSString *)searchText{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"VehicleName CONTAINS [cd] %@ ",searchText];
+    
+    NSArray *tempArray = nil;
+    if (selectedButton == 1) {
+        tempArray = allVehicleArray;
+    }
+    else if (selectedButton == 2) {
+        tempArray = activeVehicleArray;
+    }
+    else if (selectedButton == 3) {
+        tempArray = idleVehicleArray;
+    }
+    else if (selectedButton == 4) {
+        tempArray = stopVehicleArray;
+    }
+    else if (selectedButton == 5) {
+        tempArray = unavailableVehicleArray;
+    }
+    else if (selectedButton == 6) {
+        tempArray = inActiveArray;
+    }
+    //We will integrate filtering when only search text is bigger
+    if (searchText.length>0) {
+         filteredVehicleArray = [tempArray filteredArrayUsingPredicate:predicate];
+    }
+    else{
+        filteredVehicleArray = tempArray;
+    }
+    [self.tblView reloadData];
+}
+
 
 
 #pragma mark Tableview datasource and delegate methods
@@ -483,11 +543,21 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 #pragma mark Button action handling
 -(IBAction)btnVehicleStateClicked:(UIButton *)button{
     
+    if(button.tag != selectedButton){
+        [self.searchBar resignFirstResponder];
+        self.searchBar.text = @"";
+    }
     
-    
-    _dividerwidthConstraint.constant = button.frame.size.width - 5;
-    
-    _dividerLeadinConstraint.constant = 10 + button.frame.origin.x + ((button.frame.size.width - _dividerwidthConstraint.constant)/2);
+    if (IDIOM == IPAD) {
+        _dividerwidthConstraint.constant = button.titleLabel.frame.size.width;
+        
+        _dividerLeadinConstraint.constant = 10 + button.frame.origin.x + ((button.frame.size.width - _dividerwidthConstraint.constant)/2);
+    }
+    else{
+        _dividerwidthConstraint.constant = button.frame.size.width - 5;
+        
+        _dividerLeadinConstraint.constant = 10 + button.frame.origin.x + ((button.frame.size.width - _dividerwidthConstraint.constant)/2);
+    }
     
     [self defaultColor];
 
@@ -529,10 +599,6 @@ static const NSInteger NOTIFICATION_TAG = 1021;
     }
     
     [self.tblView reloadData];
-    
-    [self.searchBar resignFirstResponder];
-    
-    self.searchBar.text = @"";
     
 }
 
@@ -599,38 +665,7 @@ static const NSInteger NOTIFICATION_TAG = 1021;
 #pragma mark Search bar delegate method
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-
-    //NSLog(@"serach text");
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"VehicleName CONTAINS [cd] %@ ",searchText];
-    
-    NSArray *tempArray = nil;
-    if (selectedButton == 1) {
-        tempArray = allVehicleArray;
-    }
-    else if (selectedButton == 2) {
-        tempArray = activeVehicleArray;
-    }
-    else if (selectedButton == 3) {
-        tempArray = idleVehicleArray;
-    }
-    else if (selectedButton == 4) {
-        tempArray = stopVehicleArray;
-    }
-    
-    //We will integrate filtering when only search text is bigger
-    if (searchText.length>0) {
-         filteredVehicleArray = [tempArray filteredArrayUsingPredicate:predicate];
-    }
-    else{
-        filteredVehicleArray = tempArray;
-    }
-    
-    //NSLog(@"filteredVehicleArray =%@",filteredVehicleArray);
-    
-    [self.tblView reloadData];
-    
-    
+    [self filterTheVehicleListAsPerSearch:searchText];
 }
 
 

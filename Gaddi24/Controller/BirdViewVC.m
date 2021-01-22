@@ -222,7 +222,7 @@ static NSString * const kGeoAddress = @"kGeoAddress";
         markerView.imageView2.image = [Util mapImage:dict[@"VehicleType"]];
         markerView.imageView2.contentMode = UIViewContentModeScaleAspectFit;
         markerView.imageView2.tintColor = [Util vehicleColor:dict];
-        markerView.imageView2.frame = CGRectMake(vehicleOrignin, 36, 30, 30);
+        markerView.imageView2.frame = CGRectMake(vehicleOrignin, 36, 40, 40);
         markerView.imageView2.transform = CGAffineTransformMakeRotation([dict[@"Direction"] floatValue]); //DKD added on 27Feb2020 as need tp show vehicle direction.
         
         

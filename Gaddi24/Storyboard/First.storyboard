@@ -11,11 +11,11 @@
         <array key="FontAwesome.otf">
             <string>FontAwesome</string>
         </array>
-        <array key="Roboto.ttf">
-            <string>Roboto-Regular</string>
-        </array>
-        <array key="Roboto_Bold.ttf">
+        <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -323,11 +323,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEI-D5-x2V">
                                 <rect key="frame" x="0.0" y="25" width="375" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="318-hh-5in">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="318-hh-5in">
                                         <rect key="frame" x="10" y="0.0" width="500" height="49"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGk-5j-Y0j" userLabel="BtnAll">
-                                                <rect key="frame" x="0.0" y="0.0" width="65" height="49"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="L5E-Qh-NXE"/>
@@ -342,7 +342,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S58-y5-Rc2" userLabel="BtnActive">
-                                                <rect key="frame" x="75" y="0.0" width="65.5" height="49"/>
+                                                <rect key="frame" x="73.5" y="0.0" width="53.5" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="tCC-Br-3WX"/>
@@ -357,7 +357,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RF5-BM-mvM" userLabel="BtnIdle">
-                                                <rect key="frame" x="150.5" y="0.0" width="65" height="49"/>
+                                                <rect key="frame" x="147" y="0.0" width="53.5" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="1Vx-2r-hqI"/>
@@ -372,7 +372,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei1-BO-pa4" userLabel="BtnStop">
-                                                <rect key="frame" x="225.5" y="0.0" width="65.5" height="49"/>
+                                                <rect key="frame" x="220.5" y="0.0" width="54" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="WiZ-vH-OP7"/>
@@ -387,7 +387,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-l2-AYx" userLabel="BtnUnavailable">
-                                                <rect key="frame" x="301" y="0.0" width="65" height="49"/>
+                                                <rect key="frame" x="294.5" y="0.0" width="53.5" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="o7H-8U-w8x"/>
@@ -402,7 +402,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFw-dK-UNR" userLabel="BtnInActive">
-                                                <rect key="frame" x="376" y="0.0" width="124" height="49"/>
+                                                <rect key="frame" x="368" y="0.0" width="132" height="49"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="7Sk-bb-VbH"/>
@@ -455,6 +455,11 @@
                                 <rect key="frame" x="0.0" y="75" width="375" height="56"/>
                                 <color key="barTintColor" red="0.15294117647058825" green="0.16078431372549018" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                        <color key="value" red="1" green="0.61176470589999998" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="2M9-Fd-DwA" id="QOO-D1-i1g"/>
                                 </connections>
@@ -495,21 +500,21 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="GJ65 WP 9215" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szI-HX-qcE" userLabel="Label1">
-                                                    <rect key="frame" x="86" y="18" width="169" height="20"/>
+                                                    <rect key="frame" x="86" y="18" width="170" height="22.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24-Nov-2016 02:30PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-2e-NnH" userLabel="Label2">
-                                                    <rect key="frame" x="86" y="46" width="169" height="20"/>
+                                                    <rect key="frame" x="86" y="48.5" width="170" height="22.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="battery_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="58Q-zr-00b">
-                                                    <rect key="frame" x="330" y="15.5" width="25" height="25"/>
+                                                    <rect key="frame" x="330" y="17" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="Uzg-IN-Hey"/>
@@ -517,7 +522,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="ac_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOr-8z-4Sj">
-                                                    <rect key="frame" x="330" y="45" width="25" height="25"/>
+                                                    <rect key="frame" x="330" y="50" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="2dz-Ll-F6g"/>
@@ -597,21 +602,21 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="GJ65 WP 9215" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQZ-Ze-aaP" userLabel="Label1">
-                                                    <rect key="frame" x="78" y="18" width="159" height="19"/>
+                                                    <rect key="frame" x="78" y="18" width="160" height="21.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24-Nov-2016 02:30PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20L-wj-R45" userLabel="Label2">
-                                                    <rect key="frame" x="78" y="45" width="159" height="19"/>
+                                                    <rect key="frame" x="78" y="47.5" width="160" height="21.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="battery_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmY-rU-fEJ">
-                                                    <rect key="frame" x="330" y="15" width="25" height="25"/>
+                                                    <rect key="frame" x="330" y="16.5" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="An6-1z-cRC"/>
@@ -619,7 +624,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="ac_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-xA-KiJ">
-                                                    <rect key="frame" x="330" y="43" width="25" height="25"/>
+                                                    <rect key="frame" x="330" y="48" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="Fbj-os-sxg"/>
@@ -627,7 +632,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-e9-6Ip" userLabel="RenewBtn" customClass="CustomButton">
-                                                    <rect key="frame" x="275" y="34" width="80" height="30"/>
+                                                    <rect key="frame" x="275" y="33" width="80" height="32"/>
                                                     <color key="backgroundColor" red="0.70196078429999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="O3q-J8-ya5"/>
@@ -719,21 +724,21 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="GJ65 WP 9215" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw2-Jg-f1T" userLabel="Label1">
-                                                    <rect key="frame" x="73" y="20" width="207" height="19"/>
+                                                    <rect key="frame" x="73" y="20" width="207" height="21.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="24-Nov-2016 02:30PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr3-4W-CAR" userLabel="Label2">
-                                                    <rect key="frame" x="73" y="44" width="207" height="24"/>
+                                                    <rect key="frame" x="73" y="46.5" width="207" height="21.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="battery_red.png" translatesAutoresizingMaskIntoConstraints="NO" id="2q3-1t-I8V">
-                                                    <rect key="frame" x="335" y="17" width="25" height="25"/>
+                                                    <rect key="frame" x="335" y="18.5" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="ZZw-Us-7tN"/>
@@ -749,7 +754,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-y2-9JR" userLabel="RenewBtn" customClass="CustomButton">
-                                                    <rect key="frame" x="280" y="29" width="80" height="30"/>
+                                                    <rect key="frame" x="280" y="28" width="80" height="32"/>
                                                     <color key="backgroundColor" red="0.70196078429999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Egd-LF-XBS"/>
@@ -1522,8 +1527,8 @@
                                                     <state key="selected" image="Radio_Checked.png"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="Z7v-lb-uD9"/>
                                                             <exclude reference="GZQ-QM-yK4"/>
+                                                            <exclude reference="Z7v-lb-uD9"/>
                                                             <exclude reference="aq8-kh-ImP"/>
                                                         </mask>
                                                     </variation>
@@ -1563,8 +1568,8 @@
                                                     <state key="selected" image="Radio_Checked.png"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="Kem-ql-1l5"/>
                                                             <exclude reference="BRL-Fr-2jb"/>
+                                                            <exclude reference="Kem-ql-1l5"/>
                                                         </mask>
                                                     </variation>
                                                 </button>
@@ -1611,15 +1616,15 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="GSs-w8-J2R"/>
                                                     <exclude reference="0E7-QQ-KxF"/>
-                                                    <exclude reference="SlA-Gu-xjh"/>
                                                     <exclude reference="CY1-Bd-rbL"/>
+                                                    <exclude reference="GSs-w8-J2R"/>
+                                                    <exclude reference="SlA-Gu-xjh"/>
                                                     <exclude reference="62a-4h-MAM"/>
-                                                    <exclude reference="kAH-ch-pdC"/>
                                                     <exclude reference="V2C-DL-iBu"/>
-                                                    <exclude reference="mhl-l2-IWL"/>
+                                                    <exclude reference="kAH-ch-pdC"/>
                                                     <exclude reference="1Mt-Qd-lgc"/>
+                                                    <exclude reference="mhl-l2-IWL"/>
                                                     <exclude reference="oEo-xV-XQH"/>
                                                 </mask>
                                             </variation>

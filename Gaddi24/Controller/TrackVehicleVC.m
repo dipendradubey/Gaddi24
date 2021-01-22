@@ -195,7 +195,8 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     self.navigationItem.rightBarButtonItem=rightbarButton;
     
     
-    markerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    markerImgView = [[UIImageView alloc] initWithFrame:[Util FetchVehicleFrameOnTracking:self.selectedVehicleDict[@"VehicleType"]]];
+    
     markerImgView.image = [Util mapImage:self.selectedVehicleDict[@"VehicleType"]];
     markerImgView.contentMode = UIViewContentModeScaleAspectFit;
     
@@ -249,7 +250,7 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     
     camera = [GMSCameraPosition cameraWithLatitude:[self.selectedVehicleDict[@"Latitude"] doubleValue]
                                          longitude:[self.selectedVehicleDict[@"Longitude"] doubleValue]
-                                              zoom:15];
+                                              zoom:16];
     self.mapView.camera = camera;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showTrackVehicle) name:kTrackVehicleNotification object:nil];
@@ -450,6 +451,7 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     
     if (!marker){
         marker = [[GMSMarker alloc] init];
+        markerImgView.frame = [Util FetchVehicleFrameOnTracking:self.vehicleDataDict[@"VehicleType"]];
         marker.position = coordinate;
         markerImgView.image = [Util mapImage:self.vehicleDataDict[@"VehicleType"]];
         marker.iconView = markerImgView;
@@ -654,7 +656,11 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
              //cell.view1.hidden = NO;
             image = [Util normalImage:self.vehicleDataDict[@"VehicleType"]];
             cell.imageView1.tintColor = [Util vehicleColor:self.vehicleDataDict];
-            
+            cell.imageView2.tintColor = [Util vehicleColor:self.vehicleDataDict];
+            int vehicleState = [self.vehicleDataDict[@"VehicleState"] intValue];
+            if(vehicleState != 1 && vehicleState != 2 && vehicleState != 3){
+                cell.imageView2.tintColor = [UIColor lightGrayColor];
+            }
         }
         else if (indexPath.row==1 && [self.vehicleDataDict[@"BatteryStatus"] intValue]) {
             title = @"Full";
@@ -679,7 +685,9 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
         }
         else if (indexPath.row==3){
             fontawsomeCode = @"\uf017";
-            title = [Util updateDurationFormate:self.vehicleDataDict[@"Duration"]];
+            title = self.vehicleDataDict[@"DurationString"];
+            
+            //[Util updateDurationFormate:self.vehicleDataDict[@"Duration"]];
         }
 //        else if (indexPath.row==5){
 //            image = [UIImage imageNamed:@"fuelpump_icon.png"];
@@ -687,6 +695,11 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
 //        }
 
         cell.imageView1.image = image;
+        cell.imageView2.image = image;
+        
+        cell.imageView2.hidden = indexPath.row == 0 ? false:true;
+        cell.imageView1.hidden = !cell.imageView2.hidden;
+
         cell.lbl1.textColor = [UIColor whiteColor];
         
         cell.lbl1.text = [NSString stringWithFormat:@"%@", fontawsomeCode];
@@ -803,6 +816,9 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
 
 #pragma mark ---------------------Working on it-------------------
 
+-(IBAction)btnVehicleShareClicked:(UIButton *)sender{
+    [Util shareLatLong:self.vehicleDataDict forViewController:self forButton:sender];
+}
 
 -(IBAction)btnMapClicked:(id)sender{
     

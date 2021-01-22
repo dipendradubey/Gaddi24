@@ -94,6 +94,10 @@ static NSString * const kDate = @"kDate";
 
 static NSString * const kDonotshow = @"kDonotshow";
 
+static NSString * const kLoginDate = @"kLoginDate";
+static NSString * const kLogoutNotification = @"kLogoutNotification";
+
+
 
 #define DEFAULT_COLOR [UIColor colorWithRed:39/255.0f green:41/255.0f blue:47/255.0f alpha:1]
 #define SELECTED_COLOR [UIColor colorWithRed:255.0/255.0f green:156.0/255.0f blue:55.0/255.0f alpha:1]

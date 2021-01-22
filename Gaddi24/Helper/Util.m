@@ -15,6 +15,7 @@
 #import "AppDelegate.h"
 #import "UIViewController+MMDrawerController.h"
 #import "NSString+Localizer.h"
+#import "TrackVehicleVC.h"
 
 @implementation Util
 
@@ -478,6 +479,43 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
     if(defaultImage == nil)
         defaultImage = [UIImage imageNamed:@"truck_map"];
     return defaultImage;
+}
+
++(CGRect)FetchVehicleFrame:(NSString *)imageName1{
+    
+    NSString *imageName = [imageName1 lowercaseString];
+    CGRect frame = CGRectMake(0, 0, 50, 50);
+    if([imageName isEqualToString:@"car"] ||
+       [imageName isEqualToString:@"taxi"]){
+        frame = CGRectMake(0, 0, 35, 35);
+    }
+    return  frame;
+}
+
++(CGRect)FetchVehicleFrameOnTracking:(NSString *)imageName1{
+    
+    NSString *imageName = [imageName1 lowercaseString];
+    CGRect frame = CGRectMake(0, 0, 45, 45);
+    if([imageName isEqualToString:@"car"] ||
+       [imageName isEqualToString:@"taxi"]){
+        frame = CGRectMake(0, 0, 30, 30);
+    }
+    return  frame;
+}
+
++(void)shareLatLong:(NSDictionary *)vehicleDataDict forViewController:(TrackVehicleVC *)VC forButton:(UIButton *)btn{
+    
+    NSString *shareLink = [NSString stringWithFormat:@"http://maps.google.com/maps?saddr=&daddr=%lf,%lf",[vehicleDataDict[@"Latitude"] doubleValue],[vehicleDataDict[@"Longitude"] doubleValue]];
+    
+    NSArray *activityItems = @[shareLink];
+    UIActivityViewController *activityViewControntroller = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityViewControntroller.excludedActivityTypes = @[];
+    [VC presentViewController:activityViewControntroller animated:true completion:nil];
+
+    if (IDIOM == IPAD) {
+        activityViewControntroller.popoverPresentationController.sourceView =
+       btn;
+    }
 }
 
 +(UIColor *)vehicleColor:(NSDictionary *)dict{

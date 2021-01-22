@@ -80,6 +80,8 @@ static NSString *const NOTIFICATION_DETAIL_PAGE = @"NOTIFICATION_DETAIL_PAGE";
                                                  name:@"FCMToken"
                                                object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(forceLogout:) name:kLogoutNotification object:nil];
+    
 }
 -(void)menuSetup:(id)data{
     NSString * appVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
@@ -267,6 +269,11 @@ static NSString *const NOTIFICATION_DETAIL_PAGE = @"NOTIFICATION_DETAIL_PAGE";
 }
 
 #pragma mark handling notification received
+
+-(void)forceLogout:(NSNotification *)notification{
+    [self showLoginPage];
+}
+
 -(void)showNotificationDetailPage:(NSNotification *)notification{
     
     NSDictionary *userInfo = notification.userInfo;
