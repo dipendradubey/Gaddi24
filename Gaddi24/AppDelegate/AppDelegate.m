@@ -328,6 +328,14 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     NSData* data = [userInfo[@"notification_info"] dataUsingEncoding:NSUTF8StringEncoding];
     if (data) {
         NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        /*
+        
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"didReceiveNotificationResponse" message:[NSString stringWithFormat:@"%@",[dataDict description]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        
+        return;
+         */
         if (dataDict) {
             UIViewController *lastVC = [Util fetchLastViewcontroller];
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Third" bundle:nil];

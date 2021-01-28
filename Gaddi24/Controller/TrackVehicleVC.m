@@ -406,8 +406,19 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     if(points == nil)
         points = [[NSMutableArray alloc] init];
     
-    [points addObject:[self.vehicleDataDict mutableCopy]];
+    double latitude = 0.0;
+    double longitude = 0.0;
+    /*
+     NSLog(@"===latitude =%lf And Longitude =%lf",[self.vehicleDataDict[@"Latitude"] doubleValue],[self.vehicleDataDict[@"Longitude"] doubleValue]);
+     
+     */
     
+    if(self.vehicleDataDict != nil){
+        latitude = [self.vehicleDataDict[@"Latitude"] doubleValue];
+        longitude = [self.vehicleDataDict[@"Longitude"] doubleValue];
+    }
+    
+    [points addObject:@{@"Latitude":@(latitude),@"Longitude":@(longitude)}];
     [markersMutArray addObject:marker];
     
     self.mapView.hidden = NO;
