@@ -500,7 +500,7 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
     NSString *imageName = [imageName1 lowercaseString];
     CGRect frame = CGRectMake(0, 0, 45, 45);
     if([imageName isEqualToString:@"car"] ||
-       [imageName isEqualToString:@"taxi"]){
+       [imageName isEqualToString:@"taxi"]|| [imageName isEqualToString:@"van"]){
         frame = CGRectMake(0, 0, 30, 30);
     }
     return  frame;
