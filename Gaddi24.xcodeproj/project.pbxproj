@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		757DB479588B59C5DAF77CDE /* libPods-Gaddi24.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C9F14B40E9FBD7ABB0CC24 /* libPods-Gaddi24.a */; };
 		A801D6BD24B7873E00B3A777 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A801D6BC24B7873E00B3A777 /* WebVC.m */; };
-		A815C8442519BC6B00C9042F /* ContactsScan.m in Sources */ = {isa = PBXBuildFile; fileRef = A815C8432519BC6B00C9042F /* ContactsScan.m */; };
 		A8250CDD25BA624C008F322D /* PlayBackMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8250CDC25BA624C008F322D /* PlayBackMarker.xib */; };
 		A82C917A244329E500BB4074 /* MarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82C9177244329E500BB4074 /* MarkerWindow.xib */; };
 		A82C917B244329E500BB4074 /* VehicleSmallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82C9178244329E500BB4074 /* VehicleSmallView.xib */; };
@@ -74,8 +73,6 @@
 		A801D6BC24B7873E00B3A777 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
 		A801D6BE24B7994E00B3A777 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A801D6BF24B7994E00B3A777 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A815C8422519BC6B00C9042F /* ContactsScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsScan.h; sourceTree = "<group>"; };
-		A815C8432519BC6B00C9042F /* ContactsScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsScan.m; sourceTree = "<group>"; };
 		A8250CDC25BA624C008F322D /* PlayBackMarker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayBackMarker.xib; sourceTree = "<group>"; };
 		A82C9177244329E500BB4074 /* MarkerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerWindow.xib; sourceTree = "<group>"; };
 		A82C9178244329E500BB4074 /* VehicleSmallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleSmallView.xib; sourceTree = "<group>"; };
@@ -281,8 +278,6 @@
 		A82C91AA244329F700BB4074 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A815C8422519BC6B00C9042F /* ContactsScan.h */,
-				A815C8432519BC6B00C9042F /* ContactsScan.m */,
 				A82C91AB244329F700BB4074 /* MapViewAnnotation.m */,
 				A82C91AC244329F700BB4074 /* CollectionViewCell.h */,
 				A82C91AD244329F700BB4074 /* TableViewCell.m */,
@@ -576,7 +571,6 @@
 				A82C91CF244329F700BB4074 /* TrackVehicleVC.m in Sources */,
 				A85CF068244C1CBD00DE6DA5 /* NSString+Localizer.m in Sources */,
 				A82C91CA244329F700BB4074 /* VehicleListVC.m in Sources */,
-				A815C8442519BC6B00C9042F /* ContactsScan.m in Sources */,
 				A801D6BD24B7873E00B3A777 /* WebVC.m in Sources */,
 				A8867FD924B7AE8800C42D0C /* MarqueeLabel.m in Sources */,
 				A82C91D4244329F700BB4074 /* ReportVC.m in Sources */,
@@ -756,7 +750,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gaddi24/Gaddi24.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = YVSNH75XYA;
 				INFOPLIST_FILE = Gaddi24/Info.plist;
@@ -765,10 +759,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaddi24.gaddi24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Gaddi24_Adhoc;
+				PROVISIONING_PROFILE_SPECIFIER = Gaddi24_AppStore;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -781,7 +775,7 @@
 				CODE_SIGN_ENTITLEMENTS = Gaddi24/Gaddi24.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = YVSNH75XYA;
 				INFOPLIST_FILE = Gaddi24/Info.plist;
@@ -790,10 +784,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaddi24.gaddi24;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Gaddi24_Adhoc;
+				PROVISIONING_PROFILE_SPECIFIER = Gaddi24_AppStore;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

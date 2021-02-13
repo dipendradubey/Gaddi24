@@ -39,8 +39,6 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     
     [self registerForRemoteNotification:application];
     
-    //Hi
-    
     //This will make badge icon count to 0
     application.applicationIconBadgeNumber = 0;
     

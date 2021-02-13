@@ -17,7 +17,6 @@
 #import "BirdViewVC.h"
 #import "NotificationListVC.h"
 #import "NSString+Localizer.h"
-#import "ContactsScan.h"
 #import "AppDelegate.h"
 @import Firebase;
 
@@ -30,7 +29,6 @@
     NSArray *stopVehicleArray;
     NSArray *unavailableVehicleArray;
     NSArray *inActiveArray;
-    ContactsScan *contactsScan;
     NSArray *arrContactList;
 
     short selectedButton; //1=All, 2=Active, 3=Idle, 4=Stop
@@ -125,10 +123,7 @@ static const NSInteger NOTIFICATION_TAG = 1021;
     if(screenWidth > _stackViewWidth.constant){
         _stackViewWidth.constant = screenWidth;
     }
-    
-    contactsScan = [[ContactsScan alloc] init];
-    contactsScan.contactScanDelegate = self;
-    
+        
     //Navigation bar setup
     self.navigationController.navigationBar.hidden = NO;
     
@@ -200,7 +195,6 @@ static const NSInteger NOTIFICATION_TAG = 1021;
     
     self.searchBar.placeholder = [@"HINT_SEARCH" localizableString:@""];
 
-    [contactsScan retriveContactList];
     [self buttonSetUp];
     
 }

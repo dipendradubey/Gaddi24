@@ -273,13 +273,13 @@ static NSString * const kGeoAddress = @"kGeoAddress";
         
         MarkerView *markerView = [[[NSBundle mainBundle] loadNibNamed:@"VehicleSmallView" owner:self options:nil] objectAtIndex:0];
         
-        markerView.lbl1.frame = CGRectMake(10, 10, 320, 11);
+        markerView.lbl1.frame = CGRectMake(20, 10, 320, 11);
         markerView.lbl1.text = dict[@"VehicleName"];
         markerView.lbl1.numberOfLines = 0;
         [markerView.lbl1 sizeToFit];
         
         CGRect vehicleNameFrame = markerView.lbl1.frame;
-        markerView.view1.frame = CGRectMake(0, 0, vehicleNameFrame.size.width+20, 31);
+        markerView.view1.frame = CGRectMake(0, 0, vehicleNameFrame.size.width+40, 31);
         [markerView.view1 updateStyleWithInfo:@{kCornerRadius:@3.0f, kBorderWidth:@1.0f,kBorderColor:[UIColor colorWithRed:227/255.0f green:224/255.0f blue:216/255.0f alpha:1.0f]}];
         
         CGFloat triangleOrignin = markerView.view1.center.x-(markerView.imageView1.frame.size.width)/2;//sice triangle xorigin = markerView.view1.center.x - triangle.width/2
@@ -291,12 +291,19 @@ static NSString * const kGeoAddress = @"kGeoAddress";
         markerView.imageView2.image = [Util mapImage:dict[@"VehicleType"]];
         markerView.imageView2.contentMode = UIViewContentModeScaleAspectFit;
         markerView.imageView2.tintColor = [Util vehicleColor:dict];
-        markerView.imageView2.frame = CGRectMake(vehicleOrignin, 36, 40, 40);
-        markerView.imageView2.transform = CGAffineTransformMakeRotation([dict[@"Direction"] floatValue]); //DKD added on 27Feb2020 as need tp show vehicle direction.
-        
+        markerView.imageView2.frame = [Util FetchVehicleFrameOnTracking:dict[@"VehicleType"]];
+        CGRect vehicleFrame = markerView.imageView2.frame;
+        vehicleFrame.origin = CGPointMake(vehicleOrignin, 36);
+        markerView.imageView2.frame = vehicleFrame;
+        //markerView.imageView2.frame = CGRectMake(vehicleOrignin, 36, 40, 40);
+        //markerView.imageView2.transform = CGAffineTransformMakeRotation([dict[@"Direction"] floatValue]);
+        markerView.imageView2.transform = CGAffineTransformMakeRotation((M_PI*[dict[@"Direction"] floatValue])/180.0f);
+
+        //CGAffineTransformMakeRotation([dict[@"Direction"] floatValue]); //DKD added on 27Feb2020 as need tp show vehicle direction.
+        //marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
         
         //DKD added this to set manually set size of markerview so as label increses size will also be icreased
-        CGRect markerFrame = CGRectMake(0, 0, 212, 70);
+        CGRect markerFrame = CGRectMake(0, 0, 212, 120); //(0, 0, 212, 70);
         markerFrame.size.width = markerView.view1.frame.size.width;
         markerView.frame = markerFrame;
         markerView.backgroundColor = [UIColor clearColor];

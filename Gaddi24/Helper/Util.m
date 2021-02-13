@@ -476,8 +476,11 @@ if ([navigationController respondsToSelector:@selector(viewControllers)]) {
     NSString *mapImageName = [NSString stringWithFormat:@"%@_map",
                               [imageName lowercaseString]];
     UIImage *defaultImage = [UIImage imageNamed:mapImageName];
-    if(defaultImage == nil)
+    if(defaultImage == nil){
         defaultImage = [UIImage imageNamed:@"truck_map"];
+        NSLog(@"image name =%@",mapImageName);
+    }
+    
     return defaultImage;
 }
 

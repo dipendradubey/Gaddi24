@@ -31,7 +31,7 @@
 @interface TrackVehicleVC ()<ConnectionHandlerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, PlaybackVCDelegate,PopoverVCDelegate,UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate,GMSMapViewDelegate,CLLocationManagerDelegate, MyDateConatinerDelegate>{
     ConnectionHandler *connectionHandler;
     NSTimer *timer;
-    
+    NSTimer *updateTimer;
     GMSCameraPosition *camera;
     
     NSArray *staticArray;
@@ -114,6 +114,7 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self invaldateTimer];
+    [self invalidateUpdateTimer];
     //DKD commeneted on 26Feb2020
     //[self.mapView clear];
     
@@ -389,18 +390,20 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
         marker.position = coordinate;
         markerImgView.image = [Util mapImage:self.vehicleDataDict[@"VehicleType"]];
         marker.iconView = markerImgView;
-        markerImgView.tintColor = [Util vehicleColor:self.vehicleDataDict];
         marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
         marker.map = self.mapView;
+        [self updateVehicleStatus];
        }else{
            [CATransaction begin];
            [CATransaction setAnimationDuration:[[Util retrieveDefaultForKey:kTimeInterval] integerValue]]; //animationduration
            marker.position = coordinate;
            markerImgView.image = [Util mapImage:self.vehicleDataDict[@"VehicleType"]];
            marker.iconView = markerImgView;
-           markerImgView.tintColor = [Util vehicleColor:self.vehicleDataDict];
            marker.rotation = [self.vehicleDataDict[@"Direction"] floatValue];
            [CATransaction commit];
+           
+//           [self invalidateUpdateTimer];
+//           updateTimer = [NSTimer scheduledTimerWithTimeInterval:[[Util retrieveDefaultForKey:kTimeInterval] integerValue] target:self selector:@selector(updateVehicleStatus) userInfo:nil repeats:NO];
        }
     
     if(points == nil)
@@ -428,8 +431,20 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     
     
     //DKD added this on 09 Feb 2020
-    [self performSelector:@selector(drawLineBetweenLocation) withObject:nil afterDelay:animationDuration];
-    //[self drawLineBetweenLocation]; //Draw line between location
+    //[self performSelector:@selector(drawLineBetweenLocation) withObject:nil afterDelay:animationDuration];
+    [self drawLineBetweenLocation]; //Draw line between location
+    
+    [self updateVehicleStatus];
+
+}
+
+
+-(void)updateVehicleStatus{
+    
+    NSLog(@"vehiclesetup callled");
+    
+    markerImgView.tintColor = [Util vehicleColor:self.vehicleDataDict];
+
     
     //DKD added this on 07 July 2019
     [self getGeoAddress: [self.vehicleDataDict[@"LoadFromGoogle"] intValue]?YES:NO];
@@ -446,7 +461,15 @@ static const CGFloat VEHICLEINFO_CELL_HEIGHT = 47.0F;
     self.buttonParking.selected = [self.vehicleDataDict[@"ParkingMode"] boolValue];
     
     [self.collectionView2 reloadData];
+    
+    
+}
 
+-(void)invalidateUpdateTimer{
+    if(!updateTimer){
+        [updateTimer invalidate];
+        updateTimer = nil;
+    }
 }
 
 -(void)drawLineBetweenLocation{

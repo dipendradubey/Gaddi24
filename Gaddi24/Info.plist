@@ -32,8 +32,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSContactsUsageDescription</key>
-	<string>Gaddi24 uses contact to sync</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location is used to track vehicle</string>
 	<key>UIAppFonts</key>

@@ -500,14 +500,14 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="GJ65 WP 9215" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szI-HX-qcE" userLabel="Label1">
-                                                    <rect key="frame" x="86" y="18" width="170" height="22.5"/>
+                                                    <rect key="frame" x="86" y="18" width="174" height="22.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24-Nov-2016 02:30PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-2e-NnH" userLabel="Label2">
-                                                    <rect key="frame" x="86" y="48.5" width="170" height="22.5"/>
+                                                    <rect key="frame" x="86" y="48.5" width="174" height="20"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -522,7 +522,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="ac_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOr-8z-4Sj">
-                                                    <rect key="frame" x="330" y="50" width="25" height="25"/>
+                                                    <rect key="frame" x="330" y="47.5" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="2dz-Ll-F6g"/>
@@ -602,14 +602,14 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="GJ65 WP 9215" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQZ-Ze-aaP" userLabel="Label1">
-                                                    <rect key="frame" x="78" y="18" width="160" height="21.5"/>
+                                                    <rect key="frame" x="78" y="18" width="163.5" height="21.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24-Nov-2016 02:30PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20L-wj-R45" userLabel="Label2">
-                                                    <rect key="frame" x="78" y="47.5" width="160" height="21.5"/>
+                                                    <rect key="frame" x="78" y="47.5" width="163.5" height="19"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -624,7 +624,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="ac_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-xA-KiJ">
-                                                    <rect key="frame" x="330" y="48" width="25" height="25"/>
+                                                    <rect key="frame" x="330" y="45.5" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="Fbj-os-sxg"/>
@@ -632,7 +632,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-e9-6Ip" userLabel="RenewBtn" customClass="CustomButton">
-                                                    <rect key="frame" x="275" y="33" width="80" height="32"/>
+                                                    <rect key="frame" x="275" y="34" width="80" height="30"/>
                                                     <color key="backgroundColor" red="0.70196078429999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="O3q-J8-ya5"/>
@@ -754,7 +754,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-y2-9JR" userLabel="RenewBtn" customClass="CustomButton">
-                                                    <rect key="frame" x="280" y="28" width="80" height="32"/>
+                                                    <rect key="frame" x="280" y="29" width="80" height="30"/>
                                                     <color key="backgroundColor" red="0.70196078429999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Egd-LF-XBS"/>
@@ -1510,6 +1510,9 @@
                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="selected" image="Radio_Checked.png"/>
+                                                    <connections>
+                                                        <action selector="btnRadioClicked:" destination="1zF-xM-heQ" eventType="touchUpInside" id="M9K-pL-CrA"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-NX-bNd" userLabel="20 seconds (Btn2)">
                                                     <rect key="frame" x="222" y="61.5" width="144" height="30"/>
@@ -1532,6 +1535,9 @@
                                                             <exclude reference="aq8-kh-ImP"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="btnRadioClicked:" destination="1zF-xM-heQ" eventType="touchUpInside" id="ncs-Z1-bKK"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-fc-Q0Q" userLabel="30 seconds (Btn3)">
                                                     <rect key="frame" x="9" y="111.5" width="160" height="30"/>
@@ -1552,6 +1558,9 @@
                                                             <exclude reference="X1D-u9-Ff5"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="btnRadioClicked:" destination="1zF-xM-heQ" eventType="touchUpInside" id="9rj-1m-7uM"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ2-vZ-SL1" userLabel="60 seconds (Btn4)">
                                                     <rect key="frame" x="222" y="111.5" width="160" height="30"/>
@@ -1572,6 +1581,9 @@
                                                             <exclude reference="Kem-ql-1l5"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="btnRadioClicked:" destination="1zF-xM-heQ" eventType="touchUpInside" id="Wdk-uz-bP1"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uX1-BN-6yq" userLabel="Divider">
                                                     <rect key="frame" x="0.0" y="161.5" width="375" height="1"/>

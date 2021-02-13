@@ -69,6 +69,11 @@
     
     NSUInteger activeIndex;
     
+    NSUInteger oldIndex;
+    
+    NSUInteger newIndex;
+
+    
     NSString *startDateString;
     
     NSString *endDateString;
@@ -260,7 +265,6 @@ static const CGFloat VERY_FAST = 0.05;
     
     
     
-    
     //[self createDateView:@{kMaximumDate:[NSDate date],kPickerTitle:@"Please select start date"}];
     
 }
@@ -431,7 +435,7 @@ static const CGFloat VERY_FAST = 0.05;
 }
 
 -(void)moveVehicle{
-    
+        
     self.slider.value = activeIndex + 1;
     
     NSUInteger index = activeIndex;
@@ -812,6 +816,10 @@ static const CGFloat VERY_FAST = 0.05;
 #pragma mark Popoverdelegate method
 -(void)popoverSelected:(NSString *)title{
     //Speed // [popoverVC updateTableContent:@[@"Very slow",@"Slow",@"Normal",@"Fast",@"Very fast"] withSelectedTitle:selectedSpeed];
+    
+    
+    [self cancelButtonPressed];
+    
     if (selectedValue == 1) {
         selectedSpeed = title;
         if ([selectedSpeed isEqualToString:[@"ITEM_VERY_SLOW" localizableString:@""]]) {
@@ -838,7 +846,7 @@ static const CGFloat VERY_FAST = 0.05;
         if ([selectedTime isEqualToString:[@"ITEM_USER_DEFINED" localizableString:@""]]) {
             startDateString = @"";
             endDateString = @""; //@"Please select start date"
-            [self createDateView:@{kMaximumDate:[NSDate date],kPickerTitle:@""}];
+            [self createDateView:@{kMaximumDate:[NSDate date],kPickerTitle:@"Please select start date"}];
         }
         else{
             NSDictionary *dict = nil;
@@ -885,6 +893,47 @@ static const CGFloat VERY_FAST = 0.05;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Slider Value Change
+
+- (IBAction)sliderValueChanged:(UISlider *)slider {
+
+    return;
+    NSLog(@"slider value =%lf and slider max value =%lf",slider.value,slider.maximumValue);
+    
+    [self invaldateTimer];
+    
+    newIndex = slider.value;
+    
+//    if(oldIndex == newIndex)
+//        return;
+    
+    if(newIndex >= routeArray.count)
+        return;
+    NSDictionary *pointDict = routeArray[newIndex];
+    
+    //NSLog(@"pointdict =%@",pointDict);
+    
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([pointDict[@"Latitude"] doubleValue], [pointDict[@"Longitude"] doubleValue]);
+
+    CGFloat zoomValue = self.mapView.camera.zoom;
+
+    
+    camera =
+    [GMSCameraPosition cameraWithLatitude:coordinate.latitude
+                                longitude:coordinate.longitude zoom:zoomValue];
+    [self.mapView animateToCameraPosition:camera];
+    
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:VERY_FAST];
+    marker.position = coordinate;
+    marker.rotation = [pointDict[@"Direction"] floatValue];
+    [CATransaction commit];
+    
+    
+}
+
+
+/*
 -(void)createDateView:(NSDictionary *)dict{
     
     if (!myDateContainer) {
@@ -913,7 +962,28 @@ static const CGFloat VERY_FAST = 0.05;
     myDateContainer.hidden = NO;
 
 }
+*/
 
+-(void)createDateView:(NSDictionary *)dict{
+    
+    if (!myDateContainer) {
+        myDateContainer = [[MyDateConatiner alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 250, self.view.bounds.size.width, 250)];
+        myDateContainer.myDateConatinerDelegate = self;
+
+        [self.view addSubview:myDateContainer];
+        myDateContainer.backgroundColor = [UIColor colorWithRed:234/255.0f green:234/255.0f blue:234/255.0f alpha:1.0];
+
+        [myDateContainer childviewSetup];
+        
+    }
+    
+   [myDateContainer valueSetUp:dict];
+    myDateContainer.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    myDateContainer.datePicker.maximumDate = [NSDate date];
+    
+    myDateContainer.hidden = NO;
+    
+}
 
 -(void)hidePopover{
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -935,6 +1005,7 @@ static const CGFloat VERY_FAST = 0.05;
         }
         //Minimum date should be max 2 years
         [self createDateView:@{kMinimumDate:dtStartDate,kPickerTitle:@"Please select end date",kMaximumDate:maxDate}] ;
+        myDateContainer.datePicker.maximumDate = maxDate;
         myDateContainer.hidden = NO;
     }
     else{

@@ -22,6 +22,15 @@
     UIView *btnContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 44)];
     btnContainer.backgroundColor = [UIColor whiteColor];
     [self addSubview:btnContainer];
+    btnContainer.backgroundColor = [UIColor clearColor];
+    [self addSubview:btnContainer];
+    
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 44)];
+    lbl.text = @"";
+    lbl.textAlignment = NSTextAlignmentCenter;
+    lbl.tag = 1000;
+    lbl.textColor = [UIColor colorWithRed:215/255.0 green:75/255.0 blue:28/255.0 alpha:1.0];
+    [self addSubview:lbl];
     
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     closeButton.frame = CGRectMake(0, 0, 100, 44);
@@ -45,7 +54,6 @@
 
     [self addSubview:datePicker];
      
-     
 }
 
 
@@ -63,6 +71,11 @@
     }
     
     self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    
+    if(dict[kPickerTitle] != nil){
+        UILabel *lbl = [self viewWithTag:1000];
+        lbl.text = dict[kPickerTitle];
+    }
 }
 
 
